@@ -1,0 +1,107 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-items: center;
+  padding: 2rem 1rem;
+
+  // @media only screen and(max-width: $bp-large) {
+  //   display: none; // CAMBIAR ESTO OJO!!! BORRA TODO EL NAVBAR, QUIERO HACER UN MENU
+  // }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo__title{        
+    font-family: kimiFont;
+    font-size: 7rem;
+    font-weight: 100;
+    letter-spacing: 0.5rem;
+    margin-bottom: -1rem;    
+  }
+
+  .logo__subtitle{
+    font-size: 1.2rem;
+    font-family: kimiFontTertiary;
+    letter-spacing: 0.3rem;
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-content: center;
+    justify-items: center;
+  }
+
+  &__item-container {
+    position: relative;
+    & > a {
+      &:hover + .navbar__sub-menu {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item,
+  &__item:link,
+  &__item:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: $color-dark;
+    font-weight: 300;
+    font-size: 1.3rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.2s;
+
+    &:hover {
+      color: lighten($color-dark, 25%);
+      cursor: pointer;
+    }
+  }
+
+  &__sub-menu {
+    border-radius: 0.25rem;
+    background-color: $color-sub-menu;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 1rem 3.5rem;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 1;
+
+    &:hover {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    & li {
+      padding: 1rem;
+      color: $color-dark;
+
+      a {
+        text-decoration: none;
+        color: $color-dark;
+        transition: all 0.2s;
+        letter-spacing: 0.2rem;
+        &:hover {
+          color: lighten($color-dark, 25%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

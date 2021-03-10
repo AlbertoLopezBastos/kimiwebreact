@@ -1,0 +1,109 @@
+.front-page-2 {
+  margin: 0 auto;
+  text-align: center;
+  background-color: $color-beige;
+  padding: 7rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem 0;
+  }
+
+  &-white{
+    background-color: $color-light;
+  }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  padding: 5rem;
+
+  @media only screen and (max-width: $bp-small) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-small) {
+    margin: 3rem 0;
+  }
+
+  &__img-1,
+  &__img-2,
+  &__img-3 {
+    height: 40rem;
+    width: 40rem;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover + p {
+      color: lighten($color-dark, 10%);
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      height: 30rem;
+      width: 30rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      height: 20rem;
+      width: 20rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      max-height: 40rem;
+      max-width: 40rem;
+    }
+  }
+
+  &__img-1 {
+    background-image: url("../../img/product-1.jpeg");
+  }
+  &__img-2 {
+    background-image: url("../../img/product-2.jpeg");
+  }
+  &__img-3 {
+    background-image: url("../../img/product-3.jpg");
+  }
+
+  &__text {
+    padding-top: 1rem;
+    font-family: $font-secondary;
+    font-size: 1.7rem;
+    font-style: italic;
+    color: $color-primary;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 60vw;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: lighten($color-dark, 10%);
+    }
+  }
+
+  &__price {
+    font-family: $font-tertiary;
+    font-size: 1.5rem;
+    padding: 1rem;
+
+    span {
+      margin-right: 1rem;
+      text-decoration: line-through;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.heading-2 {
+  text-transform: uppercase;
+  color: $color-primary;
+  font-size: 3rem;
+  font-weight: 200;
+  letter-spacing: 0.65rem;
+  padding: 1rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 0;
+    font-size: 2.5rem;
+  }
+}
+
+.heading-3 {
+  font-family: $font-secondary;
+  font-style: italic;
+  color: $color-primary;
+  font-size: 2.2rem;
+  font-weight: 100;
+  letter-spacing: 0.5rem;
+  padding: 1rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 0;
+    font-size: 2rem;
+
+    margin-bottom: 1.5rem;
+  }
+}
+
+.heading-4 {
+  font-family: $font-primary;
+  color: $color-primary;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  padding: 1rem;
+}
+
+.heading-5 {
+  font-family: $font-secondary;
+  color: $color-dark;
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  padding: 1rem;
+}

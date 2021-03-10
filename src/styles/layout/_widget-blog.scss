@@ -1,0 +1,231 @@
+.widget-blog {
+  background-color: $color-beige;
+  text-align: center;
+
+  &__grid {
+    display: grid;
+    grid-template-areas:
+      "post1 post1 social"
+      "post1 post1 email"
+      "post1 post1 search"
+      "post1 post1 category"
+      "post2 post3 category"
+      "post2 post3 instagram"
+      "post4 post5 .";
+    width: 65vw;
+    row-gap: 2.5rem;
+    column-gap: 2.5rem;
+    margin: 0 auto;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 95vw;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 90vw;
+      grid-template-areas:
+        "post1 "
+        "post2 "
+        "post3 "
+        "post4 "
+        "post5 "
+        "social "
+        "email "
+        "category"
+        "search"
+        "instagram ";
+    }
+  }
+
+  &__post {
+    border: 3rem solid $color-light;
+    background-color: $color-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &-1 {
+      grid-area: post1;
+    }
+    &-2 {
+      grid-area: post2;
+    }
+    &-3 {
+      grid-area: post3;
+    }
+    &-4 {
+      grid-area: post4;
+    }
+    &-5 {
+      grid-area: post5;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    font-family: $font-tertiary;
+    width: 90%;
+    line-height: 2.75rem;
+    font-weight: 100;
+    text-align: left;
+    letter-spacing: 0.1rem;
+  }
+
+  &__social-media {
+    background-color: $color-light;
+    border: 3rem solid $color-light;
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__social-container {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__cta-mail {
+    border: 3rem solid $color-light;
+    grid-area: email;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+  }
+
+  &__search {
+    background-color: $color-light;
+    border: 3rem solid $color-light;
+    grid-area: search;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__search-input {
+    width: 90%;
+    padding: 0.75rem 1rem;
+    border: 1px solid lighten($color-dark, 70%);
+    font-family: $font-secondary;
+    font-size: 1.7rem;
+    outline: 1px solid lighten($color-dark, 80%);
+  }
+
+  &__search-by-category {
+    background-color: $color-light;
+    border: 3rem solid $color-light;
+    grid-area: category;
+  }
+
+  &__list {
+    list-style: none;
+
+    &-item {
+      background-color: $color-beige;
+      margin-top: 0.5rem;
+      padding: 1rem 2rem;
+      font-family: $font-tertiary;
+      font-size: 1.4rem;
+      font-weight: 100;
+
+      &:hover {
+        cursor: pointer;
+        color: lighten($color-dark, 50%);
+      }
+    }
+
+    :nth-child(even) {
+      background-color: $color-beige-3;
+    }
+  }
+  &__instagram {
+    background-color: $color-light;
+    box-sizing: border-box;
+    grid-area: instagram;
+  }
+
+  .instagram-grid {
+    padding: 1.5rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 2rem;
+
+    &__img {
+      height: 12rem;
+      width: 12rem;
+      background-color: $color-primary;
+    }
+  }
+
+  &__img-2,
+  &__img-3,
+  &__img-4,
+  &__img-5 {
+    background-size: cover;
+    max-height: 50rem;
+    max-width: 32rem;
+    min-height: 40rem;
+    min-width: 25rem;
+
+    @media only screen and (max-width: $bp-small) {
+      height: 35rem;
+      width: 100%;
+    }
+  }
+
+  &__img-1 {
+    background-image: url("../../img/blog-1.jpg");
+    background-size: cover;
+    height: 50rem;
+    width: 73rem;
+
+    @media only screen and (max-width: $bp-small) {
+      height: 35rem;
+      width: 100%;
+    }
+  }
+  &__img-2 {
+    background-image: url("../../img/blog-2.jpeg");
+  }
+  &__img-3 {
+    background-image: url("../../img/blog-3.jpg");
+  }
+  &__img-4 {
+    background-image: url("../../img/blog-4.jpeg");
+  }
+  &__img-5 {
+    background-image: url("../../img/blog-5.png");
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-family: $font-secondary;
+    font-weight: 100;
+
+    &:hover {
+      cursor: pointer;
+      color: lighten($color-dark, 50%);
+    }
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    padding: 0 1rem;
+    color: $color-primary;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-dark;
+    }
+  }
+}

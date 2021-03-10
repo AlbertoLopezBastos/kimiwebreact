@@ -1,0 +1,77 @@
+.cta-mail {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 75vw;
+  padding: 7rem 0;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $bp-largest) {
+    width: 90vw;
+  }
+  @media only screen and (max-width: $bp-small) {
+    width: 98vw;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  &__input {
+    border: 1px solid lighten($color-dark, 75%);
+    padding: 1rem;
+    margin-right: 1rem;
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    &:focus {
+      border: 1px solid #999;
+      outline: none;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__submit {
+    padding: 1.2rem 4rem;
+    background-color: $color-cta-btn;
+    border: none;
+    color: $color-light;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1.2rem;
+    font-family: $font-primary;
+    transition: all 0.2s;
+    outline-color: lighten($color-cta-btn, 20%);
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($color-cta-btn, 20%);
+      color: $color-dark;
+    }
+  }
+}

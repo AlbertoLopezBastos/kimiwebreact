@@ -1,0 +1,24 @@
+.widget-footer {
+  background-color: $color-beige;
+  text-align: center;
+
+  &__instagram-showcase {
+    display: flex;
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    width: 250px;
+    height: 225px;
+    background-color: $color-light;
+    border: 1px solid $color-primary;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 1rem 0;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "./base/variables";
+@import "./base/base";
+@import "./base/typography";
+
+@import "./utils/mixins";
+
+@import "./layout/widget-anouncement.scss";
+@import "./layout/footer";
+@import "./layout/site-header";
+@import "./layout/navbar";
+@import "./layout/home-slider";
+@import "./layout/front-page-1";
+@import "./layout/cta-mail";
+@import "./layout/front-page-2";
+@import "./layout/front-page-3";
+@import "./layout/front-page-4";
+@import "./layout/front-page-5";
+@import "./layout/widget-blog";
+@import "./layout/nav-footer";
+@import "./layout/widget-footer";
+@import "./layout/site-footer";
+
+@import "./components/whatsapp";

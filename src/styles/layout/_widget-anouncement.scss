@@ -1,0 +1,15 @@
+.widget-anouncement {
+  align-items: center;
+  background-color: $color-sub-menu;
+  display: flex;
+  font-weight: 300;
+  justify-content: center;
+  letter-spacing: 0.3rem;
+  min-height: 2rem;
+  padding: 0.75rem 2rem;
+  position: sticky;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  z-index: 100;
+}

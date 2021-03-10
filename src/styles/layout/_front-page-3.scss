@@ -1,0 +1,71 @@
+.front-page-3 {
+  text-align: center;
+  margin: 0 auto;
+  width: 65vw;
+
+  @media only screen and (max-width: $bp-large) {
+    width: 80vw;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__photo {
+    background-image: url("../../img/travel-photo.png");
+    height: 60rem;
+    width: 50rem;
+    background-size: cover;
+  }
+
+  &__details {
+    // justify-self: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    font-family: $font-tertiary;
+    width: 50rem;
+    line-height: 2.75rem;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 0.1rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 90vw;
+    }
+  }
+
+  &__btn {
+    border: 1px solid $color-dark;
+    background-color: transparent;
+    color: $color-dark;
+    text-transform: uppercase;
+    padding: 2rem 4rem;
+    font-family: $font-primary;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    transition: all 0.2s;
+    text-decoration: none;
+
+
+    &:hover {
+      background-color: $color-cta-btn;
+      cursor: pointer;
+      color: $color-light;
+    }
+  }
+}

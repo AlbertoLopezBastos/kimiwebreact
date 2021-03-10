@@ -1,0 +1,62 @@
+.home-slider {
+  background-image: url("../../img/portada2.jpg");
+  background-size: cover;
+  min-height: 60rem;
+  position: relative;
+
+  @media only screen and (max-width: 1920px) {
+    display: block;
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    display: block;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    display: block;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    display: block;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    display: block;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    display: block;
+  }
+
+  &__welcome {
+    display: grid;
+    row-gap: 1rem;
+    justify-items: center;
+    position: absolute;
+    padding: 8rem 6rem;
+    top: 20rem;
+    right: 10rem;
+    background-color: $color-light;
+    opacity: 0.8;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      width: 65%;
+      height: 1px;
+      background-color: lighten($color-primary, 30%);
+      position: absolute;
+    }
+
+    &::before {
+      top: 15%;
+    }
+    &::after {
+      bottom: 15%;
+    }
+  }
+}
