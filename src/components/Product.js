@@ -1,11 +1,16 @@
 import React from 'react'
 
-export default function Product(props) {
+
+export default function Product({id,img,title,price, click}) {
+
+  const showPrices = false;
+
   return (
-    <div className="product" id={props.id}>
-      <div className={`product__img-${props.img}`}></div>
-      <p className="product__text">{props.description}</p>
-      <p className="product__price">{props.price}</p>
+    <div onClick={click} className="product" id={id}>
+      <img className="product__img" alt="Imagen del producto" src={img}></img>
+      <p className="product__text">{title}</p>
+      { showPrices && <p className="product__price">{price}</p> }
     </div>
   )
 }
+

@@ -1,4 +1,4 @@
-.front-page-2 {
+.products-container {
   margin: 0 auto;
   text-align: center;
   background-color: $color-beige;
@@ -16,8 +16,13 @@
 .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 10rem;
   justify-items: center;
   padding: 5rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   @media only screen and (max-width: $bp-small) {
     display: flex;
@@ -34,56 +39,23 @@
   align-items: center;
   justify-content: center;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   @media only screen and (max-width: $bp-small) {
     margin: 3rem 0;
   }
 
-  &__img-1,
-  &__img-2,
-  &__img-3 {
+  &__img{
+    width: 40em;
     height: 40rem;
-    width: 40rem;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &:hover + p {
-      color: lighten($color-dark, 10%);
-    }
-
-    @media only screen and (max-width: $bp-large) {
-      height: 30rem;
-      width: 30rem;
-    }
-    @media only screen and (max-width: $bp-small) {
-      height: 20rem;
-      width: 20rem;
-    }
-    @media only screen and (max-width: $bp-small) {
-      max-height: 40rem;
-      max-width: 40rem;
-    }
-  }
-
-  &__img-1 {
-    background-image: url("../../img/product-1.jpeg");
-  }
-  &__img-2 {
-    background-image: url("../../img/product-2.jpeg");
-  }
-  &__img-3 {
-    background-image: url("../../img/product-3.jpg");
   }
 
   &__text {
-    padding-top: 1rem;
+    padding: 2rem 0;
     font-family: $font-secondary;
-    font-size: 1.7rem;
-    font-style: italic;
+    font-size: 2rem;
     color: $color-primary;
 
     @media only screen and (max-width: $bp-small) {

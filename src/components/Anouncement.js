@@ -2,10 +2,9 @@ import React from 'react';
 
 export default function Anouncement() {
   return (
-    <div className="widget-anouncement">
+    <div className="anouncement">
       <p>
-        del 1 al 7 de Abril, tus compras tienen un 15% off / sumale envío gratis en pedidos
-        de +$3000 / enviamos el martes 11
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam odit eligendi quae fuga ex, modi incidunt quis sunt deleniti necessitatibus?
       </p>
     </div>
   )

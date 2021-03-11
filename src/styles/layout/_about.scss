@@ -1,6 +1,6 @@
-.front-page-3 {
+.about {
   text-align: center;
-  margin: 0 auto;
+  margin: 10rem auto 5rem auto;
   width: 65vw;
 
   @media only screen and (max-width: $bp-large) {
@@ -21,10 +21,11 @@
   }
 
   &__photo {
-    background-image: url("../../img/travel-photo.png");
+    // background-image: url("../../img/travel-photo.png");
     height: 60rem;
     width: 50rem;
     background-size: cover;
+    margin-bottom: 5rem;
   }
 
   &__details {

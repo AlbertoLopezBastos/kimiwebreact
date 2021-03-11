@@ -3,11 +3,11 @@
   grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-items: center;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
 
-  // @media only screen and(max-width: $bp-large) {
-  //   display: none; // CAMBIAR ESTO OJO!!! BORRA TODO EL NAVBAR, QUIERO HACER UN MENU
-  // }
+  @media only screen and(max-width: $bp-large) {
+    display: none; // CAMBIAR ESTO OJO!!! BORRA TODO EL NAVBAR, QUIERO HACER UN MENU
+  }
 
   &__logo {
     display: flex;
