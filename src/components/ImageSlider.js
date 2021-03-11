@@ -9,7 +9,7 @@ const ImageSlider = (props) => {
   return (
     <div>
       <SimpleImageSlider
-        style={{ margin: '0 auto', marginTop: '0' }}
+        style={{ margin: '0 auto', marginTop: '0',  boxShadow: '0.5rem 0.5rem 0.4rem 0rem rgba(0,0,0,0.3)' }}
         showBullets={true}
         showNavs={true}
         navStyle={2}

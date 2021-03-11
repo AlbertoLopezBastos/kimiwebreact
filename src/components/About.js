@@ -3,8 +3,8 @@ import React from 'react'
 export default function About() {
   return (
     <section id="about" className="about" data-aos="fade-up">
-      <h2 className="heading-2">Sobre Kimi</h2>
-      <h3 className=" heading-3 pt-xl">Lorem, ipsum.</h3>  
+      <h2 className="heading-2 pt-xxl">Sobre Kimi</h2>
+      <h3 className=" heading-3 pt-md">Lorem, ipsum.</h3>  
       <div className="about__content pt-xl pb-xl">
         <img className="about__photo" src="http://via.placeholder.com/500x600" alt="kimi"></img>
         <div className="about__details">

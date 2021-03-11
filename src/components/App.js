@@ -44,7 +44,7 @@ export default function App() {
       <Anouncement />  
       <Navbar />   
       <HomeSlider />
-      <Products title="Agendas" subtitle="lorem ipsum" id="agendas">      
+      <Products rows={3} title="Agendas" subtitle="lorem ipsum" id="agendas">      
         <Product 
           title="Semanal" 
           id="semanal" 
@@ -67,7 +67,7 @@ export default function App() {
           click={() => handleOpenModal({title:'Docente', desc: productDescriptions.docente, img: productImg.docenteModal})} 
         />
       </Products>
-      <Products title="Cuadernos" subtitle="lorem ipsum" dark id="cuadernos" >
+      <Products rows={3} title="Cuadernos" subtitle="lorem ipsum" dark id="cuadernos" >
         <Product 
           title="Rayado" 
           id="rayado" 
@@ -91,7 +91,7 @@ export default function App() {
         />
       </Products>
       <About/>  
-      <Products title="Kakeibo" subtitle="Método de ahorro japonés" dark id="kakeibo">
+      <Products rows={1} title="Kakeibo" subtitle="Método de ahorro japonés" dark id="kakeibo">
         <Product 
           title="Kakeibo" 
           img={productImg.kakeibo} 
@@ -99,7 +99,7 @@ export default function App() {
           click={() => handleOpenModal({title:'Kakeibo', desc: productDescriptions.kakeibo, img: productImg.kakeiboModal})} 
         />
       </Products>
-      <Products title="Babys" subtitle="lorem ipsum" id="babys">
+      <Products rows={1} title="Babys" subtitle="lorem ipsum" id="babys">
         <Product 
           title="Baby" 
           img={productImg.baby} 
@@ -108,7 +108,7 @@ export default function App() {
         />
       </Products>
       <Buy/>  
-      <Products title="Mascotas" subtitle="lorem ipsum" id="mascotas">
+      <Products rows={2} title="Mascotas" subtitle="lorem ipsum" id="mascotas">
         <Product 
           title="Libreta Sanitaria Clasica" 
           id="clasica" 
@@ -124,7 +124,7 @@ export default function App() {
           click={() => handleOpenModal({title:'Libreta Sanitaria Deluxe', desc: productDescriptions.sanitariaDeluxe, img: productImg.sanitariaDeluxeModal})} 
         />
       </Products>
-      <Products title="Telas" subtitle="lorem ipsum" dark id="telas">
+      <Products rows={3} title="Telas" subtitle="lorem ipsum" dark id="telas">
         <Product 
           title="Nihon" 
           id="nihon" 
