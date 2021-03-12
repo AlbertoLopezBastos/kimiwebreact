@@ -14,12 +14,20 @@ async function getPosts(){
   if(timeSinceLastFetch <= 1800000){
     return slimUpPosts(cache.posts);
   }
-    const data = await fetch(url).then(res => res.json());
 
-    const posts = slimUpPosts(data);
-    cache.lastFetch = Date.now();
-    cache.posts = posts;
-    return posts;
+  const data = await fetch(url)
+                    .then(res => res.json())
+                    .catch(err => { 
+                      return [];
+                    });
+  if(data == []){
+    return data;
+  }  
+
+  const posts = slimUpPosts(data);
+  cache.lastFetch = Date.now();
+  cache.posts = posts;
+  return posts;
 }
 
 function slimUpPosts(response){
