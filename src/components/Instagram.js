@@ -1,20 +1,34 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react';
+
+const url = '/.netlify/functions/instagram';
+
+
+function useInstagram(){
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch(url).then(res => res.json()).then(data => {
+      setPosts(data);
+    })
+  }, []);
+
+  return posts;
+}
 
 export default function Instagram() {
+  const gramz = useInstagram();
   return (
-    <section className="instagram pt-md pb-xl">
-      <h3 className=" heading-3">Seguime en Instagram!</h3>
-      <h2 className="heading-2 pb-md">Kimieartesanal</h2>
-      <div className="instagram__instagram-showcase">
-        <div className="instagram__img"></div>
-        <div className="instagram__img"></div>
-        <div className="instagram__img"></div>
-        <div className="instagram__img"></div>
-        <div className="instagram__img"></div>
-        <div className="instagram__img"></div>
-        <div className="instagram__img"></div>
-        <div className="instagram__img"></div>
+    <div className="instagram-container">
+      <h5 className="heading-5 pt-xxl">Seguime en Instagram!</h5>
+      <h2 className=" heading-2 pt-sm pb-xl">KIMIEARTESANAL</h2>  
+      <div className="instagram">
+
+        {gramz.map(gram => (
+          <a href={gram.url} key={gram.id} >
+            <img src={gram.thumbnail} className="instagram__img" alt={gram.caption} />
+          </a>
+        ))}
       </div>
-    </section>
+    </div>
   )
 }

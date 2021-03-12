@@ -43,7 +43,7 @@ export default function App() {
       <Modal title={modalTitle} img={modalImg} desc={modalDesc} open={isOpen} onClose={() => setIsOpen(false)} />
       <Anouncement />  
       <Navbar />   
-      <HomeSlider />
+      <HomeSlider width="100%" />
       <Products rows={3} title="Agendas" subtitle="lorem ipsum" id="agendas">      
         <Product 
           title="Semanal" 

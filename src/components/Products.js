@@ -4,7 +4,6 @@ export default function Products(props) {
 
   let containerStyles = props.dark ? "products-container ": "products-container products-container-white ";
   let productStyles = "";
-  console.log(props.rows)
   switch(props.rows){
     case(1):
       productStyles+= "products products--single";

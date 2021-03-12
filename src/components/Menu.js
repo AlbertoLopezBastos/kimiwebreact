@@ -17,7 +17,7 @@ export default function Menu() {
 
         <nav className="navigation__nav">
             <ul className="navigation__list">
-                <li onClick={ () => handleCheckBox()} className="navigation__item"><a href="#agendas" className="navigation__link">Agendas</a></li>
+                <li className="navigation__item"><a href="#agendas" className="navigation__link">Agendas</a></li>
                 <li className="navigation__item"><a href="#cuadernos" className="navigation__link">Cuadernos</a></li>
                 <li className="navigation__item"><a href="#kakeibo" className="navigation__link">Kakeibo</a></li>
                 <li className="navigation__item"><a href="#babys" className="navigation__link">Babys</a></li>

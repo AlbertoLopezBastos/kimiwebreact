@@ -3,10 +3,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: $color-beige;
+  background-color: $color-light;
   padding: 6rem;
   z-index: 1000;
-  border-radius: 0.5rem;
+  border-radius: 0.1rem;
   width: 55vw;
 
 
@@ -31,20 +31,26 @@
 
   &__closeBtn{
     border: none;
-    background-color: $color-beige-2;
-    color: $color-dark;
+    background-color: $color-dark;
+    color: $color-light;
     border-radius: 5rem;
     font-size: 2rem;
     height: 4rem;
     width: 4rem;
-    transition: all 0.1s ease-in;
+    transition: all 0.2s ease-in;
     position: fixed;
     top: 2rem;
     right: 2rem;
+    outline: none;
 
     &:hover{
       cursor: pointer;
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: 0.2rem 0.3rem 0.4rem 0rem rgba(0,0,0,0.2);
+    }
+
+    &:active{
+      transform: translateY(0px);
     }
   }
 }
