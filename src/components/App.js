@@ -30,14 +30,13 @@ export default function App() {
   }
 
   return (
-    <div>
-      
-      { false && <Menu/>}  
-
+    <div> 
+      <Menu/>
       <Modal title={modalTitle} img={modalImg} desc={modalDesc} open={isOpen} onClose={() => setIsOpen(false)} />
       <Anouncement />  
-      <Navbar />   
+      <Navbar />
       <HomeSlider width="100%" />
+
       <Products rows={3} title="Agendas" subtitle="lorem ipsum" id="agendas">      
         <Product 
           title="Semanal" 
@@ -150,7 +149,8 @@ export default function App() {
       </Products>
       <Instagram/>  
       <Footer/>  
-      <Whatsapp/>        
+      <Whatsapp/>
+  
     </div>
   );  
 }

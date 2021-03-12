@@ -2,8 +2,14 @@ import React from 'react';
 import NavbarContainer from './NavbarContainer';
 import NavbarSubMenu from './NavbarSubMenu';
 import NavbarSubMenuItem from './NavbarSubMenuItem';
+import icons from '../img/sprite.svg';
 
 export default function Navbar() {
+
+const instagramIcon = <svg className="instagram__icon">        
+                        <use xlinkHref={`${icons}#icon-instagram`}></use>                           
+                      </svg>;
+
   return (
     <nav className="navbar">
     <div className="navbar__logo">
@@ -42,7 +48,7 @@ export default function Navbar() {
           </NavbarSubMenu>
         </NavbarContainer>
         <NavbarContainer item="Sobre mí" id="about" />
-        <NavbarContainer item="Instagram" id="about" />
+        <NavbarContainer item={instagramIcon} link="https://www.instagram.com/kimieartesanal/"  />
       </div>
     </nav>
   )

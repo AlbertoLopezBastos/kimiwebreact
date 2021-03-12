@@ -9,6 +9,13 @@
   border-radius: 0.1rem;
   width: 55vw;
 
+  @media only screen and (max-width: 1700px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
 
   &__container{
     display: flex;

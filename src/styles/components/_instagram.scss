@@ -19,6 +19,14 @@
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   }
 
+  &__icon{
+    fill: #833AB4;
+    height: 4rem;
+    width: 4rem;   
+    margin-left: 4rem;
+    transform: translate(-25%, -35%); 
+  }
+
   &__img {
     width: 20rem;
     height: 20rem;
