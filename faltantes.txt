@@ -1,0 +1,6 @@
+logo kimi centrado en mobile cuando ya no hay nav
+modal mobile
+agregar instragram al menu mobile y como compro en ambos menus
+cerrar menu mobile
+funcioens netlify
+deploy netlify
