@@ -12,7 +12,6 @@ import Whatsapp from './Whatsapp';
 import productImg from './Images';
 import productDescriptions from './ProductDescriptions';
 import productPrices from './ProductPrices';
-import Modal2 from './Modal/index';
 import Modal from './Modal';
 import Menu from './Menu';
 
@@ -32,11 +31,6 @@ export default function App() {
 
   return (
     <div>
-      {false && (
-        <Modal2 id="modal" isOpen={isOpen} onClose={() => setIsOpen(false)}>
-          <div className="box-body">I am the content of the modal</div>
-        </Modal2>
-      )}
       
       { false && <Menu/>}  
 

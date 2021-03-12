@@ -1,12 +1,18 @@
 .navbar {
   display: grid;
+  max-width: 1800px;
+  margin: auto;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-items: center;
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
+  // position: sticky;
+  // top: 4rem;
+  // z-index: 1000;
+  background-color: $color-light;
 
-  @media only screen and(max-width: $bp-large) {
-    display: none; // CAMBIAR ESTO OJO!!! BORRA TODO EL NAVBAR, QUIERO HACER UN MENU
+  @media only screen and(max-width: $bp-medium) {
+    display: none; 
   }
 
   &__logo {
@@ -32,7 +38,7 @@
 
   &__nav {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     align-content: center;
     justify-items: center;
   }
@@ -55,8 +61,8 @@
     letter-spacing: 0.2rem;
     color: $color-dark;
     font-weight: 300;
-    font-size: 1.3rem;
-    padding: 2rem;
+    font-size: 1.1rem;
+    padding: 1rem;
     text-align: center;
     transition: all 0.2s;
 

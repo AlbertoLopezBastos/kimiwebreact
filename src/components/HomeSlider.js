@@ -2,10 +2,10 @@ import React from 'react';
 import ImageSlider from './ImageSlider';
 import Images from './Images';
 
-export default function HomeSlider() {
+export default function HomeSlider(props) {
   return (
     <section className="home-slider">
-    <ImageSlider width={1906} height={600} duration={2} images={Images.portada} />
+    <ImageSlider width={props.width} height={600} duration={2} images={Images.portada} />
     </section>
   )
 }

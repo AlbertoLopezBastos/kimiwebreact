@@ -2,11 +2,6 @@ import React from 'react'
 
 export default function Menu() {
 
-  const handleCheckBox = () => {
-    return true
-  }
-
-
   return (
     <div className="navigation">
         <input type="checkbox" id="navi-toggle" className="navigation__checkbox"/>

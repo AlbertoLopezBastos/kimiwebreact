@@ -3,15 +3,21 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  max-width: 1920px;
+  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
+  
 }
 
 .instagram {
+  padding: 1rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   background-color: $color-beige;
   text-align: center;
 
-
+  @media only screen and (max-width: $bp-md-sm) {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
 
   &__img {
     width: 20rem;
@@ -19,8 +25,10 @@
     border: 5px solid $color-beige;
     border-radius: 0.5rem;
     transition: all 0.15s ease-in-out;
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp-md-sm) {
       margin: 1rem 0;
+      width: 15rem;
+      height: 15rem;
     }
 
     &:hover{

@@ -1,11 +1,12 @@
 .home-slider {
 
+
   @media only screen and (max-width: 1920px) {
     display: block;
   }
 
   @media only screen and (max-width: $bp-largest) {
-    display: none;
+    display: block;
   }
 
   @media only screen and (max-width: $bp-large) {

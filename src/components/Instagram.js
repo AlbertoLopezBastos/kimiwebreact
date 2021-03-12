@@ -24,7 +24,7 @@ export default function Instagram() {
       <div className="instagram">
 
         {gramz.map(gram => (
-          <a href={gram.url} key={gram.id} >
+          <a href={gram.url} key={gram.id} target="_blank" rel="noopener noreferrer" >
             <img src={gram.thumbnail} className="instagram__img" alt={gram.caption} />
           </a>
         ))}

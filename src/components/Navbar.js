@@ -42,6 +42,7 @@ export default function Navbar() {
           </NavbarSubMenu>
         </NavbarContainer>
         <NavbarContainer item="Sobre mí" id="about" />
+        <NavbarContainer item="Instagram" id="about" />
       </div>
     </nav>
   )
