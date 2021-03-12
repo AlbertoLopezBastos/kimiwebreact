@@ -1,7 +1,7 @@
 require('isomorphic-fetch');
 
 const url = 'https://www.instagram.com/graphql/query/?query_hash=42323d64886122307be10013ad2dcc44&variables={%22id%22:10879409002,%22first%22:9}';
- 
+
 const cache = {
   lastFetch: 0,
   posts: []
@@ -23,12 +23,15 @@ async function getPosts(){
 }
 
 function slimUpPosts(response){
-  return response.data.user.edge_owner_to_timeline_media.edges.map(edge=> ({
-    thumbnail: edge.node.thumbnail_src,
-    url: `https://instagram.com/p/${edge.node.shortcode}`,
-    //caption: edge.node.edge_media_to_caption.edges[0].node ? edge.node.edge_media_to_caption.edges[0].node.text : '',
-    id: edge.node.id
-  }));
+  if(response.data){
+    return response.data.user.edge_owner_to_timeline_media.edges.map(edge=> ({
+      thumbnail: edge.node.thumbnail_src,
+      url: `https://instagram.com/p/${edge.node.shortcode}`,
+      //caption: edge.node.edge_media_to_caption.edges[0].node ? edge.node.edge_media_to_caption.edges[0].node.text : '',
+      id: edge.node.id
+    }));
+  }
+  else return [];
 }
 
 exports.handler = async function (event, context, callback) {

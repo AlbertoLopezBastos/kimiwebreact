@@ -6,7 +6,7 @@ export default function About() {
       <h2 className="heading-2 pt-xxl">Sobre Kimi</h2>
       <h3 className=" heading-3 pt-md">Lorem, ipsum.</h3>  
       <div className="about__content pt-xl pb-xl">
-        <img className="about__photo" src="http://via.placeholder.com/500x600" alt="kimi"></img>
+        <img className="about__photo" src="https://via.placeholder.com/500x600" alt="kimi"></img>
         <div className="about__details">
           <h3 className="heading-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, delectus?</h3>
           <p className="about__text">-</p>
