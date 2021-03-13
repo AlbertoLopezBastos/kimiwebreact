@@ -1,6 +1,9 @@
-logo kimi centrado en mobile cuando ya no hay nav
 modal mobile
-agregar instragram al menu mobile y como compro en ambos menus
 cerrar menu mobile
 funcioens netlify
-deploy netlify
+
+comprimir imagenes
+cambiar paleta de colores
+cambiar color de icono instragram
+foto de kim
+info textual

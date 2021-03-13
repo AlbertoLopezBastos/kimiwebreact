@@ -26,6 +26,8 @@ export default function Menu() {
                   <li onClick={() => { handleCloseMenu()}} className="navigation__item"><a href="#mascotas" className="navigation__link">Mascotas</a></li>
                   <li onClick={() => { handleCloseMenu()}} className="navigation__item"><a href="#telas" className="navigation__link">Telas</a></li>
                   <li onClick={() => { handleCloseMenu()}} className="navigation__item"><a href="#about" className="navigation__link">Sobre Mí</a></li>
+                  <li onClick={() => { handleCloseMenu()}} className="navigation__item"><a href="#buy" className="navigation__link">Cómo comprar</a></li>
+                  <li onClick={() => { handleCloseMenu()}} className="navigation__item"><a href="https://www.instagram.com/kimieartesanal/" className="navigation__link"  target="_blank" rel="noopener noreferrer">Instagram</a></li>
               </ul>
           </nav>
       </div>

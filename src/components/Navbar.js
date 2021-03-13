@@ -48,6 +48,7 @@ const instagramIcon = <svg className="instagram__icon">
           </NavbarSubMenu>
         </NavbarContainer>
         <NavbarContainer item="Sobre mí" id="about" />
+        <NavbarContainer item="Cómo comprar" id="buy" />
         <NavbarContainer item={instagramIcon} link="https://www.instagram.com/kimieartesanal/"  />
       </div>
     </nav>

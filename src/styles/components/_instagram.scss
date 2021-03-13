@@ -20,11 +20,9 @@
   }
 
   &__icon{
-    fill: #833AB4;
-    height: 4rem;
-    width: 4rem;   
-    margin-left: 4rem;
-    transform: translate(-25%, -35%); 
+    fill: $color-dark;
+    height: 3rem;
+    width: 3rem;   
   }
 
   &__img {

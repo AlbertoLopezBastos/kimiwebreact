@@ -1,19 +1,24 @@
 .navbar {
   display: grid;
   max-width: 1800px;
-  margin: auto;
-  grid-template-columns: 1fr 2fr;
+  margin: 2rem auto;
+  grid-template-columns: 1fr 4fr;
   align-items: center;
   justify-items: center;
-  padding: 3rem 1rem;
+  padding: 1rem 1rem;
   // position: sticky;
   // top: 4rem;
   // z-index: 1000;
   background-color: $color-light;
 
-  @media only screen and(max-width: $bp-medium) {
-    display: none; 
+
+  @media only screen and(max-width: 1500px) {
+    grid-template-columns: 1fr 3fr ;
   }
+
+  @media only screen and(max-width: $bp-medium) {
+    grid-template-columns: 1fr ;
+  } 
 
   &__logo {
     display: flex;
@@ -28,23 +33,50 @@
     font-weight: 100;
     letter-spacing: 0.5rem;
     margin-bottom: -1rem;    
+
+    @media only screen and(max-width: $bp-medium) {
+      font-size: 12rem;
+    }
   }
 
   .logo__subtitle{
     font-size: 1.2rem;
     font-family: kimiFontTertiary;
     letter-spacing: 0.3rem;
+
+    @media only screen and(max-width: $bp-medium) {
+      display: none;
+    }
   }
 
   &__nav {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
+    margin: auto;
     align-content: center;
     justify-items: center;
+    width: max-content;
+
+    @media only screen and(max-width: 1600px) {
+      grid-template-columns: repeat(6, 1fr);
+      row-gap: 2rem;
+    }
+
+    @media only screen and(max-width: $bp-largest) {
+      grid-template-columns: repeat(5, 1fr);
+      row-gap: 2rem;
+    }
+
+    @media only screen and(max-width: $bp-medium) {
+      display: none; 
+    }
   }
 
   &__item-container {
     position: relative;
+    margin: auto;
+    text-align: center;
+
     & > a {
       &:hover + .navbar__sub-menu {
         visibility: visible;
@@ -60,9 +92,9 @@
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     color: $color-dark;
+    padding: 0 1rem;
     font-weight: 300;
     font-size: 1.1rem;
-    padding: 1rem;
     text-align: center;
     transition: all 0.2s;
 
