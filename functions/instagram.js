@@ -13,7 +13,7 @@ async function getPosts(){
   console.log('cache on init', cache.posts)
   const timeSinceLastFetch = Date.now() - cache.lastFetch;
   if(timeSinceLastFetch <= 1800000){
-    return slimUpPosts(cache.posts);
+    return cache.posts;
   }
 
   const data = await fetch(url)
