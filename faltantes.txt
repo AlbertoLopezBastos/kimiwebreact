@@ -1,10 +1,4 @@
 
-menu mobile cerrase al click de una opcion
-menu mobile show y hide cuando corresponda
 sitio inseguro
 funcioens netlify instagram
-
 comprimir imagenes
-cambiar paleta de colores
-foto de kim
-info textual
