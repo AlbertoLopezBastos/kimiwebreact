@@ -42,7 +42,6 @@ import portada1 from '../img/portada1.jpg';
 import portada2 from '../img/portada2.jpg';
 import portada3 from '../img/portada3.jpg';
 import portada4 from '../img/portada4.jpg';
-import portada6 from '../img/portada6.jpg';
 
 const Images = {
   semanal: [semanal],
@@ -73,7 +72,7 @@ const Images = {
   tradicionalesModal: [tradicionales2],
   personalizadas: [personalizadas],
   personalizadasModal: [personalizadas2],
-  portada: [portada1, portada2, portada3, portada4, portada6]
+  portada: [portada1, portada2, portada3, portada4]
 };
 
 export default Images;

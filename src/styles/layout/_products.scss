@@ -3,7 +3,7 @@
   margin: 0 auto;
   text-align: center;
   background-color: $color-beige;
-  padding: 7rem;
+  padding: 0 7rem;
   margin-top: 0.5rem;
   box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
 
@@ -59,7 +59,7 @@
 
   &__img{
     width: 40em;
-    height: 40rem;
+    height: 32rem;
     box-shadow: 0.5rem 0.5rem 0.4rem 0rem rgba(0,0,0,0.2);
 
     @media only screen and (max-width: $bp-medium) {
@@ -76,8 +76,10 @@
   &__text {
     padding: 2rem 0;
     font-family: $font-secondary;
-    font-size: 2rem;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
     color: $color-primary;
+    margin-top: 0.75rem;
 
     @media only screen and (max-width: $bp-small) {
       width: 60vw;

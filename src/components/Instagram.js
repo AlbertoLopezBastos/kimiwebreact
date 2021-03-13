@@ -19,8 +19,8 @@ export default function Instagram() {
   const gramz = useInstagram();
   return (
     <div className="instagram-container">
-      <h5 className="heading-5 pt-xxl">Seguime en Instagram!</h5>
-      <h2 className=" heading-2 pt-sm pb-xl">KIMIEARTESANAL</h2>  
+      <h4 className="heading-3 pt-xl">Seguime en Instagram!</h4>
+      <h1 className=" heading-1 pb-xl">KIMIEARTESANAL</h1>  
       <div className="instagram">
 
         {gramz.map(gram => (

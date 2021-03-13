@@ -20,8 +20,8 @@ export default function Products(props) {
 
   return (
     <section id={props.id} className={containerStyles}>
-      <h2 className="heading-2" data-aos="fade-up">{props.title}</h2>
-      <h3 className="heading-3" data-aos="fade-up">{props.subtitle}</h3>
+      <h1 className="heading-1" data-aos="fade-up">{props.title}</h1>
+      <h2 className="heading-2 mb-xl" data-aos="fade-up">{props.subtitle}</h2>
       <div className={productStyles} data-aos="fade-up">
         {props.children}
       </div>

@@ -1,4 +1,2 @@
-
-sitio inseguro
-funcioens netlify instagram
-comprimir imagenes
+Secure Site
+Netlify Functions
