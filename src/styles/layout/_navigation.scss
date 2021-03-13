@@ -1,5 +1,4 @@
 .navigation {
-
   display: block;
 
   &__checkbox {
@@ -29,7 +28,7 @@
   }
 
   &__button {
-    background-color: $color-dark;
+    background-color: $color-beige;
     height: 7rem;
     width: 7rem;
     border-radius: 50%;
@@ -132,7 +131,7 @@
     &::after {
       width: 3rem;
       height: 2px;
-      background-color: $color-light;
+      background-color: $color-dark;
       display: inline-block;
     }
 

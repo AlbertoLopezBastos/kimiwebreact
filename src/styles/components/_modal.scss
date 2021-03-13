@@ -5,7 +5,7 @@
   transform: translate(-50%, -50%);
   background-color: $color-light;
   padding: 2rem;
-  z-index: 1000;
+  z-index: 4000;
   border-radius: 0.5rem; 
 
   &__container{
@@ -76,28 +76,22 @@
 
   &__closeBtn{
     border: none;
-    background-color: $color-dark;
-    color: $color-light;
+    color: $color-dark;
+    background-color: $color-light;
     border-radius: 5rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     height: 4rem;
     width: 4rem;
     transition: all 0.2s ease-in;
     outline: none;
-    z-index: 1000;
+    z-index: 4000;
     grid-row:  1/2;
     grid-column: 1/3;
     justify-self: end;
     align-self: center;
     position: fixed;
-    top: 2rem;
-    right: 2rem;
-
-    @media only screen and (max-width: $bp-small) {
-      position: fixed;
-      top: 2rem;
-      right: 2rem;
-    }
+    top: 1rem;
+    right: 1rem; 
 
     &:hover{
       cursor: pointer;

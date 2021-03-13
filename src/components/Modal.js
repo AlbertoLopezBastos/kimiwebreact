@@ -9,7 +9,7 @@ export default function Modal({open, img, desc, title, onClose}){
       <div>
         <div className="overlay" onClick={onClose}></div>
         <div className="modal">
-        
+        <button className="modal__closeBtn" onClick={onClose}>&#10005;</button>
           <div className="modal__container">  
             <ImageSlider width="100%" images={img} />
             <div className="modal__text">
