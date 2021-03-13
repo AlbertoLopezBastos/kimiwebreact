@@ -1,4 +1,4 @@
-.navigation {
+.menu {
   display: block;
 
   &__checkbox {
@@ -33,7 +33,7 @@
     width: 7rem;
     border-radius: 50%;
     position: fixed;
-    top: 6rem;
+    top: 7rem;
     right: 1.5rem;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba($color-dark, 0.1);
@@ -42,7 +42,7 @@
     transition: all 0.2s;
 
     @media only screen and (max-width: $bp-large) {
-      top: 8rem;
+      top: 7rem;
       right: 1.5rem;
     }
   }
@@ -60,13 +60,13 @@
     width: 6rem;
     border-radius: 50%;
     position: fixed;
-    top: 6.5rem;
+    top: 7.5rem;
     right: 1.5rem;
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 
     @media only screen and (max-width: $bp-large) {
-      top: 8.5rem;
+      top: 7.5rem;
       right: 1.5rem;
     }
   }
