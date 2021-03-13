@@ -31,7 +31,7 @@ export default function App() {
 
   return (
     <div> 
-      <Menu/>
+      { false && <Menu/>}
       <Modal title={modalTitle} img={modalImg} desc={modalDesc} open={isOpen} onClose={() => setIsOpen(false)} />
       <Anouncement />  
       <Navbar />

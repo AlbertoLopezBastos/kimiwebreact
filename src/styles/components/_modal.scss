@@ -6,40 +6,45 @@
   background-color: $color-light;
   padding: 2rem;
   z-index: 1000;
-  border-radius: 0.5rem;
- 
+  border-radius: 0.5rem; 
 
   &__container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 10fr;
 
     @media only screen and (max-width: $bp-jumbo) {
-      grid-template-rows: 1fr 1fr;
+      width: 70vw;
+    }
+
+    @media only screen and (max-width: $bp-md-sm) {
+      width: 80vw;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 60vw;
       grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 60vw;
+      max-height: 80vh;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
       width: 80vw;
     }
   }
-
-  &__img{
-    grid-column: 1/2;
-    grid-row: 2/3;
-
-    @media only screen and (max-width: $bp-jumbo) {
-      grid-column: 1/3;
-      grid-row: 1/3;
-    }
-  }
-
+  
   &__text{
-    grid-column: 2/3;
-    grid-row: 2/3;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  
 
-    @media only screen and (max-width: $bp-jumbo) {
-      grid-column: 1/3;
-      grid-row: 1/3;
+    @media only screen and (max-width: $bp-small) {
+      grid-row: 1/2;
+      justify-content: center;
     }
   }
 
@@ -62,6 +67,11 @@
     @media only screen and (max-width: 1700px) {
       font-size: 1.5rem;
     }
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
   }
 
   &__closeBtn{
@@ -79,11 +89,14 @@
     grid-column: 1/3;
     justify-self: end;
     align-self: center;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
 
-    @media only screen and (max-width: $bp-jumbo) {
+    @media only screen and (max-width: $bp-small) {
       position: fixed;
-      top: 1rem;
-      right: 1rem;
+      top: 2rem;
+      right: 2rem;
     }
 
     &:hover{
