@@ -8,12 +8,9 @@ $color-beige-3: #afafb1;
 $color-beige-2: #ead3cd;
 $color-beige: #f7e4de;
 
-$font-primary:  Arial, Helvetica, sans-serif;
-$font-secondary:  Arial, Helvetica, sans-serif;
-$font-tertiary:  Arial, Helvetica, sans-serif;
-//$font-primary: kimiFont;
-// $font-secondary: kimiFontSecondary;
-// $font-tertiary: kimiFontTertiary;
+$font-primary: kimiFont;
+$font-secondary: kimiFontSecondary;
+$font-tertiary: kimiFontTertiary;
 
 @font-face {
   font-family: kimiFont;

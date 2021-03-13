@@ -5,13 +5,12 @@ const url = 'https://www.instagram.com/graphql/query/?query_hash=42323d648861223
 const cache = {
   lastFetch: 0,
   posts: []
-
 }
 
 async function getPosts(){
   // cache in 
   const timeSinceLastFetch = Date.now() - cache.lastFetch;
-  if(timeSinceLastFetch <= 1800000){
+  if(timeSinceLastFetch <= 1800000 && cache.posts !== []){
     return slimUpPosts(cache.posts);
   }
 
