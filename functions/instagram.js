@@ -5,18 +5,21 @@ const url = 'https://www.instagram.com/graphql/query/?query_hash=42323d648861223
 const cache = {
   lastFetch: 0,
   posts: []
+
 }
 
 async function getPosts(){
   // cache in 
+  console.log('cache on init', cache.posts)
   const timeSinceLastFetch = Date.now() - cache.lastFetch;
-  if(timeSinceLastFetch <= 1800000 && cache.posts !== []){
+  if(timeSinceLastFetch <= 1800000){
     return slimUpPosts(cache.posts);
   }
 
   const data = await fetch(url)
                     .then(res => res.json())
                     .catch(err => { 
+                      console.log('error on fetch', err)
                       return [];
                     });
   if(data == []){
@@ -43,6 +46,8 @@ function slimUpPosts(response){
 
 exports.handler = async function (event, context, callback) {
   const posts = await getPosts();
+  console.log('final result', posts);
+  console.log('final cache', posts);
   callback(null, {
     statusCode: 200,
     headers: {
