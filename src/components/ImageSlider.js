@@ -1,23 +1,23 @@
-import SimpleImageSlider from "react-simple-image-slider";
+import {Carousel} from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ImageSlider = (props) => {
 
   const images = [];
 
   props.images.map((i) => images.push({url:i}));
-
+  
   return (
-    <div>
-      <SimpleImageSlider
-        style={{ margin: '0 auto', marginTop: '0', boxShadow: '0.5rem 0.5rem 0.4rem 0rem rgba(0,0,0,0.3)', backgroundSize: 'auto 100%' }}
-        showBullets={true}
-        showNavs={true}
-        navStyle={2}
-        slideDuration={props.duration}
-        width={props.width}
-        height={props.height}
-        images={images}
-      />
+    <div className="carousel-wrapper">
+      <Carousel width={props.width} showThumbs={false} infiniteLoop={true} autoPlay interval={5000} transitionTime={1000} stopOnHover={false}>
+      {props.images.map((img,idx) => {
+        return (
+        <div key={idx}>
+          <img src={img} alt="carousel img" />
+        </div>
+        )
+      })}
+      </Carousel>      
     </div>
   );
 }

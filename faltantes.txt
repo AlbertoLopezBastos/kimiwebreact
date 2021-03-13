@@ -1,9 +1,9 @@
 modal mobile
 cerrar menu mobile
+
 funcioens netlify
 
 comprimir imagenes
 cambiar paleta de colores
-cambiar color de icono instragram
 foto de kim
 info textual

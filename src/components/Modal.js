@@ -9,10 +9,10 @@ export default function Modal({open, img, desc, title, onClose}){
       <div>
         <div className="overlay"></div>
         <div className="modal">
-        <button className="modal__closeBtn" onClick={onClose}>x</button>
           <div className="modal__container">  
-            <ImageSlider width={500} duration={1} height={500} images={img} />
-            <div>
+          <button className="modal__closeBtn" onClick={onClose}>x</button>
+            <ImageSlider className="modal__img" width="100%" images={img} />
+            <div className="modal__text">
               <div className="modal__title">{title}</div>
               <div className="modal__desc">{desc}</div>
             </div>
