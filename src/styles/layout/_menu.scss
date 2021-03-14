@@ -28,13 +28,13 @@
   }
 
   &__button {
-    background-color: $color-beige;
-    height: 7rem;
-    width: 7rem;
+    background-color: $color-pink;
+    height: 5.5rem;
+    width: 5.5rem;
     border-radius: 50%;
     position: fixed;
-    top: 7rem;
-    right: 1.5rem;
+    top: 4rem;
+    right: 0.5rem;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba($color-dark, 0.1);
     text-align: center;
@@ -42,8 +42,7 @@
     transition: all 0.2s;
 
     @media only screen and (max-width: $bp-large) {
-      top: 7rem;
-      right: 1.5rem;
+      top: 7.5rem;
     }
   }
 
@@ -54,20 +53,53 @@
     top: 1rem;
   }
 
+  &__icon {
+    position: relative;
+    margin-top: 2.7rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 2.5rem;
+      height: 2px;
+      background-color: $color-dark;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    display: block;
+  }
+
   &__background {
-    background-image: radial-gradient($color-beige, $color-light);
-    height: 6rem;
-    width: 6rem;
+    background-image: radial-gradient($color-pink, $color-light);
+    height: 5.5rem;
+    width: 5.5rem;
     border-radius: 50%;
     position: fixed;
-    top: 7.5rem;
-    right: 1.5rem;
+    top: 4rem;
+    right: 0.5rem;
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 
     @media only screen and (max-width: $bp-large) {
       top: 7.5rem;
-      right: 1.5rem;
     }
   }
 
@@ -98,7 +130,7 @@
   }
 
   &__link {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 300;
     color: $color-dark;
     text-decoration: none;
@@ -117,42 +149,10 @@
     &:hover,
     &:active {
       background-position: 100%;
-      color: $color-beige;
+      color: $color-pink;
       transform: translateX(1rem);
     }
   }
 
-  &__icon {
-    position: relative;
-    margin-top: 3.5rem;
 
-    &,
-    &::before,
-    &::after {
-      width: 3rem;
-      height: 2px;
-      background-color: $color-dark;
-      display: inline-block;
-    }
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      transition: all 0.2s;
-    }
-
-    &::before {
-      top: -0.8rem;
-    }
-
-    &::after {
-      top: 0.8rem;
-    }
-  }
-
-  @media only screen and (max-width: $bp-large) {
-    display: block;
-  }
 }

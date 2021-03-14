@@ -2,13 +2,13 @@
   max-width: 1920px;
   margin: 0 auto;
   text-align: center;
-  background-color: $color-beige;
+  background-color: $color-pink;
   padding: 0 7rem;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
   box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
 
   @media only screen and (max-width: $bp-medium) {
-    padding: 3rem 0;
+    padding-bottom: 5rem;
   }
 
   &-white{
@@ -75,10 +75,10 @@
 
   &__text {
     margin: 1.5rem 0;
-    font-family: $font-primary;
-    font-size: 2.5rem;
+    font-family: kimiFont;
+    font-size: 2rem;
     font-weight: 100;
-    color: $color-primary;
+    color: $color-dark;
     text-align: center;
 
     @media only screen and (max-width: $bp-small) {
@@ -92,7 +92,7 @@
   }
 
   &__price {
-    font-family: $font-tertiary;
+    font-family: $font-secondary;
     font-size: 1.5rem;
     padding: 1rem;
 

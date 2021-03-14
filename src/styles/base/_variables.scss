@@ -1,16 +1,15 @@
-$color-light: #fff;
-$color-sub-menu: #faf9f7;
+$color-light: #f4f4f4;
+$color-dark: #343633;
+$color-pink: #eecccc;
+$color-brown: #885454;
+$color-blue: #6e8898;
 $color-whatsapp: #25d366;
-$color-dark: #6a7885;
-$color-cta-btn: #737373;
-$color-primary: #8c8d8f;
-$color-beige-3: #afafb1;
-$color-beige-2: #ead3cd;
-$color-beige: #f7e4de;
 
-$font-primary: kimiFont;
+//$font-primary: kimiFont;
 $font-secondary: kimiFontSecondary;
 $font-tertiary: kimiFontTertiary;
+
+$font-primary: 'Barlow Condensed', sans-serif;
 
 @font-face {
   font-family: kimiFont;

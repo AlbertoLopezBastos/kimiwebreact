@@ -13,6 +13,8 @@ import cuadriculado from '../img/cuadriculado/1.jpg';
 import cuadriculado2 from '../img/cuadriculado/2.jpg';
 import punteado from '../img/punteado/1.jpg';
 import punteado2 from '../img/punteado/2.jpg';
+import liso from '../img/liso/1.jpg';
+import liso2 from '../img/liso/2.jpg';
 import kakeibo from '../img/kakeibo/1.jpg';
 import kakeibo2 from '../img/kakeibo/2.jpg';
 import kakeibo3 from '../img/kakeibo/3.jpg';
@@ -42,6 +44,7 @@ import portada1 from '../img/portada1.jpg';
 import portada2 from '../img/portada2.jpg';
 import portada3 from '../img/portada3.jpg';
 import portada4 from '../img/portada4.jpg';
+import logo from '../img/logo.png';
 
 const Images = {
   semanal: [semanal],
@@ -56,6 +59,8 @@ const Images = {
   cuadriculadoModal: [cuadriculado2],
   punteado: [punteado],
   punteadoModal: [punteado2],
+  liso: [liso],
+  lisoModal: [liso2],
   kakeibo: [kakeibo],
   kakeiboModal: [kakeibo2,kakeibo3,kakeibo4,kakeibo5],
   baby: [baby],
@@ -72,7 +77,8 @@ const Images = {
   tradicionalesModal: [tradicionales2],
   personalizadas: [personalizadas],
   personalizadasModal: [personalizadas2],
-  portada: [portada1, portada2, portada3, portada4]
+  portada: [portada1, portada2, portada3, portada4],
+  logo: [logo]
 };
 
 export default Images;

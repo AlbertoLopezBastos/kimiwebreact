@@ -1,22 +1,23 @@
 .heading-1 {
   font-family: $font-primary;
   text-transform: uppercase;
-  color: $color-primary;
-  font-size: 3rem;
-  font-weight: 200;
-  letter-spacing: 0.5rem;
-  padding: 5rem 0 2.5rem 0;
+  color: $color-dark;
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  padding: 10rem 0 1.5rem 0;
   text-align: center;
 
   @media only screen and (max-width: $bp-large) {
-    font-size: 2.5rem;
+    font-size: 4rem;
+    padding: 5rem 0 1.5rem 0;
   }
 }
 
 .heading-2 {
   font-family: $font-secondary;
   font-style: italic;
-  color: $color-primary;
+  color: $color-dark;
   font-size: 2.2rem;
   font-weight: 100;
   letter-spacing: 0.2rem;
@@ -40,9 +41,8 @@
 
 .heading-4 {
   text-align: center;
-  font-family: $font-primary;
-  color: $color-primary;
-  font-size: 1.5rem;
+  color: $color-dark;
+  font-size: 2.5rem;
   font-weight: 300;
   letter-spacing: 0.1rem;
   padding: 2rem;

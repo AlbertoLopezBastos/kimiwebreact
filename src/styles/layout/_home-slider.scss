@@ -1,6 +1,8 @@
-// .home-slider {
-//   // @media only screen and (max-width: $bp-small) {
-//   //   display: none;
-//   // }
-// }
+.home-slider {
+  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
+  
+  @media only screen and (max-width: $bp-small) {
+    display: none;
+  }
+}
 

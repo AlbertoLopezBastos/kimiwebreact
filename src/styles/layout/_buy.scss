@@ -4,7 +4,7 @@
   max-width: 1920px;
   flex-direction: column;
   align-items: center;
-  background-color: $color-beige;
+  background-color: $color-pink;
   text-align: center;
   box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
   margin-top: 0.5rem;
@@ -17,14 +17,15 @@
     padding: 2rem 4rem;
     font-family: $font-primary;
     letter-spacing: 0.2rem;
-    font-size: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
     margin-top: 2.5rem;
     transition: all 0.2s;
     text-decoration: none;
 
 
     &:hover {
-      background-color: $color-cta-btn;
+      background-color: $color-dark;
       cursor: pointer;
       color: $color-light;
     }

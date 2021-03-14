@@ -37,7 +37,7 @@ export default function App() {
       <Navbar />
       <HomeSlider width="100%" />
 
-      <Products rows={3} title="Agendas" subtitle="lorem ipsum" id="agendas">      
+      <Products rows={3} title="Agendas" subtitle="¡Organízate y no te olvides de nada!" id="agendas">      
         <Product 
           title="Semanal" 
           id="semanal" 
@@ -60,7 +60,7 @@ export default function App() {
           click={() => handleOpenModal({title:'Docente', desc: productDescriptions.docente, img: productImg.docenteModal})} 
         />
       </Products>
-      <Products rows={3} title="Cuadernos" subtitle="lorem ipsum" dark id="cuadernos" >
+      <Products rows={3} title="Cuadernos" subtitle="¡Para volar con tu imaginación!" dark id="cuadernos" >
         <Product 
           title="Rayado" 
           id="rayado" 
@@ -82,9 +82,16 @@ export default function App() {
           price={productPrices.punteado}
           click={() => handleOpenModal({title:'Punteado', desc: productDescriptions.punteado, img: productImg.punteadoModal})} 
         />
+        <Product 
+          title="Liso" 
+          id="liso" 
+          img={productImg.liso} 
+          price={productPrices.liso}
+          click={() => handleOpenModal({title:'Liso', desc: productDescriptions.liso, img: productImg.lisoModal})} 
+        />
       </Products>
       <About/>  
-      <Products rows={1} title="Kakeibo" subtitle="Método de ahorro japonés" dark id="kakeibo">
+      <Products rows={1} title="Kakeibo" subtitle="El método de ahorro japonés" dark id="kakeibo">
         <Product 
           title="Kakeibo" 
           img={productImg.kakeibo} 
@@ -103,11 +110,11 @@ export default function App() {
       <Buy/>  
       <Products rows={2} title="Mascotas" subtitle="lorem ipsum" id="mascotas">
         <Product 
-          title="Libreta Sanitaria Clasica" 
-          id="clasica" 
+          title="Libreta Sanitaria Clásica" 
+          id="clásica" 
           img={productImg.sanitariaClasica} 
           price={productPrices.sanitariaClasica}
-          click={() => handleOpenModal({title:'Libreta Sanitaria Clasica', desc: productDescriptions.sanitariaClasica, img: productImg.sanitariaClasicaModal})} 
+          click={() => handleOpenModal({title:'Libreta Sanitaria Clásica', desc: productDescriptions.sanitariaClasica, img: productImg.sanitariaClasicaModal})} 
         />
         <Product 
           title="Libreta Sanitaria Deluxe" 
