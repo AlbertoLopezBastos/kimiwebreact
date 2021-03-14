@@ -28,7 +28,7 @@
   }
 
   &__button {
-    background-color: $color-pink;
+    background-color: $color-dark;
     height: 5.5rem;
     width: 5.5rem;
     border-radius: 50%;
@@ -62,7 +62,7 @@
     &::after {
       width: 2.5rem;
       height: 2px;
-      background-color: $color-dark;
+      background-color: $color-light;
       display: inline-block;
     }
 

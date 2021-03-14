@@ -1,11 +1,8 @@
 .instagram-container{
-  width: 80vw;
-  margin: auto;
+  background-color:$color-pink;
   text-align: center;
   display: flex;
   flex-direction: column;
-  max-width: 1920px;
-  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
   
   @media only screen and (max-width: $bp-medium) {
     width: 100vw;
@@ -13,23 +10,23 @@
 }
 
 .instagram {
-  width: 80vw;
+  width: 60vw;
   margin: auto;
-  padding: 2rem 0;
+  padding: 3rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(21.1rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
   row-gap: 2rem;
-  background-color: $color-pink;
   text-align: center;
-
-  @media only screen and (max-width: $bp-md-sm) {
-    //grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    padding: 5rem 0;
-  }
 
   @media only screen and (max-width: $bp-medium) {
     width: 100vw;
   }
+
+  @media only screen and (max-width: $bp-md-sm) {
+    padding: 5rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  }
+
 
   &__img {
     width: 21.2rem;
@@ -37,11 +34,11 @@
     border: 5px solid $color-light;
     border-radius: 0.5rem;
     transition: all 0.15s ease-in-out;
-    // @media only screen and (max-width: $bp-md-sm) {
-    //   margin: 1rem 0;
-    //   width: 15rem;
-    //   height: 15rem;
-    // }
+
+    @media only screen and (max-width: $bp-md-sm) {
+      width: 30rem;
+      height: 30rem;
+    }
 
     &:hover{
       transform: scale(1.2,1.2);

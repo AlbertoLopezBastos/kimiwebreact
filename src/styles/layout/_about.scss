@@ -1,13 +1,9 @@
 .about {
-  width: 80vw;
-  margin: auto;
-  box-shadow: 0rem 0.4rem 0.4rem 0rem  rgba(0,0,0,0.2);  
-
-  @media only screen and (max-width: $bp-medium) {
-    width: 100vw;
-  }
+  // box-shadow: 0rem 0.4rem 0.4rem 0rem  rgba(0,0,0,0.2);  
 
   &__grid {
+    width: 60vw;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
@@ -17,8 +13,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 100vw;
     }
-
   }
 
   &__logo{
@@ -35,8 +31,8 @@
     box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
 
     @media only screen and (max-width: $bp-medium) {
-      height: 25rem;
-      width: 20rem;
+      height: 40rem;
+      width: 30rem;
     }
   }
 
@@ -58,5 +54,15 @@
     letter-spacing: 0.15rem;
     text-align: center;
     padding: 0 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 60%;
+      margin: auto;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 80%;
+      margin: auto;
+    }
   }  
 }

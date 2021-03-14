@@ -37,7 +37,7 @@ export default function App() {
       <Navbar />
       <HomeSlider width="100%" />
 
-      <Products rows={3} title="Agendas" subtitle="¡Organízate y no te olvides de nada!" id="agendas">      
+      <Products title="Agendas" subtitle="¡Organízate y no te olvides de nada!" id="agendas">      
         <Product 
           title="Semanal" 
           id="semanal" 
@@ -60,7 +60,7 @@ export default function App() {
           click={() => handleOpenModal({title:'Docente', desc: productDescriptions.docente, img: productImg.docenteModal})} 
         />
       </Products>
-      <Products rows={3} title="Cuadernos" subtitle="¡Para volar con tu imaginación!" dark id="cuadernos" >
+      <Products title="Cuadernos" subtitle="¡Para volar con tu imaginación!" dark id="cuadernos" >
         <Product 
           title="Rayado" 
           id="rayado" 
@@ -91,7 +91,7 @@ export default function App() {
         />
       </Products>
       <About/>  
-      <Products rows={1} title="Kakeibo" subtitle="El método de ahorro japonés" dark id="kakeibo">
+      <Products title="Kakeibo" subtitle="El método de ahorro japonés" dark id="kakeibo">
         <Product 
           title="Kakeibo" 
           img={productImg.kakeibo} 
@@ -99,7 +99,7 @@ export default function App() {
           click={() => handleOpenModal({title:'Kakeibo', desc: productDescriptions.kakeibo, img: productImg.kakeiboModal})} 
         />
       </Products>
-      <Products rows={1} title="Babys" subtitle="lorem ipsum" id="babys">
+      <Products title="Babys" subtitle="lorem ipsum" id="babys">
         <Product 
           title="Baby" 
           img={productImg.baby} 
@@ -108,7 +108,7 @@ export default function App() {
         />
       </Products>
       <Buy/>  
-      <Products rows={2} title="Mascotas" subtitle="lorem ipsum" id="mascotas">
+      <Products title="Mascotas" subtitle="lorem ipsum" id="mascotas">
         <Product 
           title="Libreta Sanitaria Clásica" 
           id="clásica" 
@@ -124,7 +124,7 @@ export default function App() {
           click={() => handleOpenModal({title:'Libreta Sanitaria Deluxe', desc: productDescriptions.sanitariaDeluxe, img: productImg.sanitariaDeluxeModal})} 
         />
       </Products>
-      <Products rows={3} title="Telas" subtitle="lorem ipsum" dark id="telas">
+      <Products title="Telas" subtitle="lorem ipsum" dark id="telas">
         <Product 
           title="Nihon" 
           id="nihon" 

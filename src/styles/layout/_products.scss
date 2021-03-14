@@ -1,19 +1,7 @@
 .products-container {
-  width: 80vw;
-  margin: auto;
-  text-align: center;
   background-color: $color-pink;
-  padding: 0 7rem;
-  margin-top: 0.3rem;
-  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
-
-  @media only screen and (max-width: $bp-medium) {
-    padding-bottom: 5rem;
-  }
-
-  @media only screen and (max-width: $bp-md-sm) {
-    width: 100vw;
-  }
+  // margin-top: 0.3rem;
+  // box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
 
   &-white{
     background-color: $color-light;
@@ -21,59 +9,42 @@
 }
 
 .products {
+  justify-content: center;
+  width: 60vw;
+  margin: auto;
   display: grid;
-  grid-row-gap: 10rem;
-  justify-items: center;
-  padding: 5rem;
+  grid-template-columns:  repeat(auto-fit, minmax(33rem, 1fr));
+  padding-bottom: 5rem;
 
-  &--single{
-    grid-template-columns:  repeat(auto-fit, minmax(37rem, 1fr));
-  }
-  &--double{
-    grid-template-columns:  repeat(auto-fit, minmax(37rem, 1fr));
-  }
-  &--triple{
-    grid-template-columns:  repeat(auto-fit, minmax(37rem, 1fr));
-  }
-
-  // @media only screen and (max-width: $bp-jumbo) {
-  //   grid-template-columns: repeat(2, 1fr);
-  // }
-
-  @media only screen and (max-width: $bp-md-sm) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    grid-row-gap: 4rem;
+  @media only screen and (max-width: $bp-medium) {
+    width: 100vw;
   }
 }
 
 .product {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   transition: all 0.2s ease-in-out;
+  margin: auto;
+  padding-bottom: 1rem;
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.03,1.03);    
+    // transform: scale(1.03,1.03);    
   }
 
   &__img{
-    width: 30em;
+    width: 30rem;
     height: 23rem;
-    box-shadow: 0.5rem 0.5rem 0.4rem 0rem rgba(0,0,0,0.2);
+    // box-shadow: 0.5rem 0.5rem 0.4rem 0rem rgba(0,0,0,0.2);
 
     @media only screen and (max-width: $bp-medium) {
-      width: 35em;
+      width: 35rem;
       height: 28rem;
     }
 
     @media only screen and (max-width: $bp-small) {
-      width: 30em;
+      width: 30rem;
       height: 22rem;
     }
   }
@@ -86,20 +57,15 @@
     color: $color-dark;
     text-align: center;
 
-    @media only screen and (max-width: $bp-small) {
-      width: 60vw;
-    }
-
     &:hover {
       cursor: pointer;
-      color: lighten($color-dark, 10%);
+      color: lighten($color-dark, 30%);
     }
   }
 
   &__price {
     font-family: $font-secondary;
     font-size: 1.5rem;
-    padding: 1rem;
 
     span {
       margin-right: 1rem;
