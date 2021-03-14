@@ -10,34 +10,30 @@
 }
 
 .instagram {
-  width: 60vw;
+  width: 90vw;
   margin: auto;
   padding: 3rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   row-gap: 2rem;
   text-align: center;
 
-  @media only screen and (max-width: $bp-medium) {
-    width: 100vw;
-  }
-
   @media only screen and (max-width: $bp-md-sm) {
     padding: 5rem 0;
-    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
   }
 
 
   &__img {
-    width: 21.2rem;
-    height: 21.2rem;
-    border: 5px solid $color-light;
+    width: 20rem;
+    height: 20rem;
+    border: 3px solid $color-light;
     border-radius: 0.5rem;
     transition: all 0.15s ease-in-out;
 
     @media only screen and (max-width: $bp-md-sm) {
-      width: 30rem;
-      height: 30rem;
+      width: 25rem;
+      height: 25rem;
     }
 
     &:hover{

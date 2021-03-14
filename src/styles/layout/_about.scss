@@ -1,5 +1,6 @@
 .about {
   // box-shadow: 0rem 0.4rem 0.4rem 0rem  rgba(0,0,0,0.2);  
+  padding-bottom: 5rem;
 
   &__grid {
     width: 60vw;
@@ -18,9 +19,14 @@
   }
 
   &__logo{
-    height: 20rem;
+    height: 30rem;
     margin: auto;
     display: block;
+    margin-bottom: 5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 20rem;
+    }
   }
 
   &__photo {
