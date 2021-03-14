@@ -1,6 +1,6 @@
 .products-container {
-  max-width: 1920px;
-  margin: 0 auto;
+  width: 80vw;
+  margin: auto;
   text-align: center;
   background-color: $color-pink;
   padding: 0 7rem;
@@ -9,6 +9,10 @@
 
   @media only screen and (max-width: $bp-medium) {
     padding-bottom: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-md-sm) {
+    width: 100vw;
   }
 
   &-white{
@@ -23,18 +27,18 @@
   padding: 5rem;
 
   &--single{
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns:  repeat(auto-fit, minmax(37rem, 1fr));
   }
   &--double{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:  repeat(auto-fit, minmax(37rem, 1fr));
   }
   &--triple{
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:  repeat(auto-fit, minmax(37rem, 1fr));
   }
 
-  @media only screen and (max-width: $bp-jumbo) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  // @media only screen and (max-width: $bp-jumbo) {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
 
   @media only screen and (max-width: $bp-md-sm) {
     display: flex;
@@ -42,6 +46,7 @@
     align-items: center;
     justify-content: center;
     padding: 0;
+    grid-row-gap: 4rem;
   }
 }
 
@@ -58,8 +63,8 @@
   }
 
   &__img{
-    width: 40em;
-    height: 32rem;
+    width: 30em;
+    height: 23rem;
     box-shadow: 0.5rem 0.5rem 0.4rem 0rem rgba(0,0,0,0.2);
 
     @media only screen and (max-width: $bp-medium) {

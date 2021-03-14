@@ -1,6 +1,7 @@
 .navbar {
   display: grid;
-  max-width: 1920px;
+  width: 80vw;
+  margin: auto;
   padding: 3rem 0;
   grid-template-columns: 1fr 4fr;
   align-items: center;
@@ -8,8 +9,8 @@
   // position: sticky;
   // top: 4rem;
   // z-index: 1000;
-  background-color: $color-light;
-  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
+  background-color: #fff;
+  // box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
 
 
   @media only screen and(max-width: 1500px) {
@@ -19,6 +20,10 @@
   @media only screen and(max-width: $bp-medium) {
     grid-template-columns: 1fr ;
   } 
+
+  @media only screen and (max-width: $bp-md-sm) {
+    width: 100vw;
+  }
 
   &__logo {
     display: flex;
