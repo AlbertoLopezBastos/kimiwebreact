@@ -33,7 +33,7 @@ export default function App() {
     <div> 
       { true && <Menu/>}
       <Modal title={modalTitle} img={modalImg} desc={modalDesc} open={isOpen} onClose={() => setIsOpen(false)} />
-      <Anouncement />  
+      { false && <Anouncement />}  
       <Navbar />
       <HomeSlider width="100%" />
 
@@ -89,24 +89,21 @@ export default function App() {
           price={productPrices.liso}
           click={() => handleOpenModal({title:'Liso', desc: productDescriptions.liso, img: productImg.lisoModal})} 
         />
+        <Product 
+        title="Kakeibo" 
+        img={productImg.kakeibo} 
+        price={productPrices.kakeibo}
+        click={() => handleOpenModal({title:'Kakeibo', desc: productDescriptions.kakeibo, img: productImg.kakeiboModal})} 
+      />
+      <Product 
+      title="Baby" 
+      img={productImg.baby} 
+      price={productPrices.baby}
+      click={() => handleOpenModal({title:'Baby', desc: productDescriptions.baby, img: productImg.babyModal})} 
+    />
       </Products>
       <About/>  
-      <Products title="Kakeibo" subtitle="El método de ahorro japonés" dark id="kakeibo">
-        <Product 
-          title="Kakeibo" 
-          img={productImg.kakeibo} 
-          price={productPrices.kakeibo}
-          click={() => handleOpenModal({title:'Kakeibo', desc: productDescriptions.kakeibo, img: productImg.kakeiboModal})} 
-        />
-      </Products>
-      <Products title="Babys" subtitle="lorem ipsum" id="babys">
-        <Product 
-          title="Baby" 
-          img={productImg.baby} 
-          price={productPrices.baby}
-          click={() => handleOpenModal({title:'Baby', desc: productDescriptions.baby, img: productImg.babyModal})} 
-        />
-      </Products>
+  
       <Buy/>  
       <Products title="Mascotas" subtitle="lorem ipsum" id="mascotas">
         <Product 

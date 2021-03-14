@@ -3,6 +3,7 @@ import NavbarContainer from './NavbarContainer';
 import NavbarSubMenu from './NavbarSubMenu';
 import NavbarSubMenuItem from './NavbarSubMenuItem';
 import icons from '../img/sprite.svg';
+import Images from './Images';
 
 export default function Navbar() {
 
@@ -12,10 +13,9 @@ const instagramIcon = <svg className="instagram__icon">
 
   return (
     <nav className="navbar">
-    <div className="navbar__logo">
-      <h1 className="logo__title">KIMI</h1>
-      <h1 className="logo__subtitle">Encuadernación Artesanal</h1>
-    </div>
+      <div className="navbar__logo">
+        <img className="logo__icon" src={Images.logo} alt="kimi logo"></img>  
+      </div>
       <div className="navbar__nav">  
         <NavbarContainer item="Agendas" id="agendas">
           <NavbarSubMenu>
@@ -29,10 +29,10 @@ const instagramIcon = <svg className="instagram__icon">
           <NavbarSubMenuItem value="rayado"  id="rayado"/>
           <NavbarSubMenuItem value="cuadriculado"  id="cuadriculado"/>
           <NavbarSubMenuItem value="punteado" id="punteado"/>
+          <NavbarSubMenuItem value="babys" id="babys"/>
+          <NavbarSubMenuItem value="kakeibo" id="kakeibo"/>
           </NavbarSubMenu>
         </NavbarContainer>
-        <NavbarContainer item="Kakeibo" id="kakeibo"/>
-        <NavbarContainer item="Babys" id="babys"/>
         <NavbarContainer item="Mascotas" id="mascotas">
           <NavbarSubMenu>
             <NavbarSubMenuItem value="libreta sanitaria clásica" id="clasica"/>
@@ -49,7 +49,9 @@ const instagramIcon = <svg className="instagram__icon">
         </NavbarContainer>
         <NavbarContainer item="Sobre mí" id="about" />
         <NavbarContainer item="Cómo comprar" id="buy" />
+        {false &&
         <NavbarContainer item={instagramIcon} link="https://www.instagram.com/kimieartesanal/"  />
+        }
       </div>
     </nav>
   )

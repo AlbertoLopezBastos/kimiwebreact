@@ -3,21 +3,21 @@
   display: grid;
   width: 90vw;
   margin: auto;
-  padding: 3rem 0;
-  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 2fr 1fr;
+  padding-bottom: 1rem;
   // position: sticky;
-  // top: 4rem;
+  // top: 0rem;
   // z-index: 1000;
-  background-color: #fff;
+  background-color: $color-light;
   // box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
 
-  @media only screen and(max-width: 1500px) {
-    grid-template-columns: 1fr 2fr;
-  }
+  // @media only screen and(max-width: 1500px) {
+  //   grid-template-columns: 1fr 2fr;
+  // }
 
-  @media only screen and(max-width: $bp-medium) {
-    grid-template-columns: 1fr;
-  }
+  // @media only screen and(max-width: $bp-medium) {
+  //   grid-template-columns: 1fr;
+  // }
 
   @media only screen and (max-width: $bp-md-sm) {
     width: 100vw;
@@ -26,6 +26,12 @@
   &__logo {
     display: flex;
     flex-direction: column;
+  }
+
+  .logo__icon{
+    height: 15rem;
+    width: 14rem;
+    margin: 0 auto;
   }
 
   .logo__title {
@@ -47,23 +53,10 @@
   }
 
   &__nav {
-    display: none;
-    //display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    margin: auto;
+    display: flex;
     align-content: center;
     justify-items: center;
-    width: max-content;
-
-    @media only screen and(max-width: 1600px) {
-      grid-template-columns: repeat(6, 1fr);
-      row-gap: 2rem;
-    }
-
-    @media only screen and(max-width: $bp-largest) {
-      grid-template-columns: repeat(5, 1fr);
-      row-gap: 2rem;
-    }
+    margin: auto;
 
     @media only screen and(max-width: $bp-medium) {
       display: none;
@@ -71,10 +64,8 @@
   }
 
   &__item-container {
+    padding: 0 1rem;
     position: relative;
-    margin: auto;
-    text-align: center;
-
     & > a {
       &:hover + .navbar__sub-menu {
         visibility: visible;
@@ -88,11 +79,9 @@
   &__item:visited {
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    color: $color-dark;
     padding: 0 1rem;
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: 3rem;
     text-align: center;
     transition: all 0.2s;
 
@@ -104,11 +93,12 @@
 
   &__sub-menu {
     border-radius: 0.25rem;
-    background-color: $color-dark;
+    background-color: $color-light;
     font-size: 1.2rem;
     text-transform: uppercase;
     padding: 1rem 3.5rem;
     position: absolute;
+    margin-top: 2rem;
     top: 3rem;
     left: 50%;
     transform: translate(-50%);
@@ -130,7 +120,7 @@
 
       a {
         text-decoration: none;
-        color: $color-dark;
+        font-size: 2rem;
         transition: all 0.2s;
         letter-spacing: 0.2rem;
         &:hover {
