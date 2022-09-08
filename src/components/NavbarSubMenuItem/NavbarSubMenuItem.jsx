@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 
-export default class NavbarSubMenuItem extends React.Component {
-
-  render(){
+const NavbarSubMenuItem = (props) => {
+  
     return (
       <li>
           <Link activeClass="active" 
@@ -12,12 +11,13 @@ export default class NavbarSubMenuItem extends React.Component {
                 smooth={true} 
                 offset={-300} 
                 duration={700} 
-                onSetActive={this.handleSetActive} 
-                to={this.props.id}
+                onSetActive={props.handleSetActive} 
+                to={props.id}
           >
-            {this.props.value}
+            {props.value}
           </Link>
       </li>
-    )
-  }
+    )  
 }
+
+export default NavbarSubMenuItem;

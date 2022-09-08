@@ -3,20 +3,20 @@ import { Link } from 'react-scroll';
 
 import s from  './NavbarContainer.module.css';
 
-export default class NavbarContainer extends React.Component {
+const NavbarContainer = (props) => {
 
-  render(){ 
-
-    if(this.props.link) {
+    if(props.link) {
       return (
         <div className={s.navbar__itemContainer}>     
-        <a className={s.navbar__item} href={this.props.link} target="_blank" rel="noopener noreferrer">        
-          {this.props.item}   
+
+        <a className={s.navbar__item} href={props.link} target="_blank" rel="noopener noreferrer">        
+          {props.item}   
         </a> 
-        {this.props.children}
+        
+        {props.children}
         </div>
       )
-    }
+    }    
 
     return (
       <div className={s.navbar__itemContainer}>     
@@ -26,14 +26,15 @@ export default class NavbarContainer extends React.Component {
                 smooth={true} 
                 offset={-100} 
                 duration={700} 
-                onSetActive={this.handleSetActive} 
-                to={this.props.id}
+                onSetActive={props.handleSetActive} 
+                to={props.id}
           >        
-            {this.props.item}   
+            {props.item}   
           </Link>
    
-        {this.props.children}
+        {props.children}
       </div>
     )
-  }
 }
+
+export default NavbarContainer;

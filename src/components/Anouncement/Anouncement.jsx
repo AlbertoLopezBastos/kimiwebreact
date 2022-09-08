@@ -1,7 +1,7 @@
 import React from 'react';
 import s from  './Anouncement.module.css';
 
-export default function Anouncement() {
+const Anouncement= () => {
   return (
     <div className={s.anouncement}>
       <p>
@@ -10,3 +10,5 @@ export default function Anouncement() {
     </div>
   )
 }
+
+export default Anouncement;

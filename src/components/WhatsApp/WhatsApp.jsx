@@ -1,9 +1,9 @@
 import React from 'react';
 import icons from '../../img/sprite.svg';
 
-import s from  './Whatsapp.module.css';
+import s from  './WhatsApp.module.css';
 
-export default function Whatsapp() {
+const WhatsApp = () => {
   return (
     <a className={s.whatsapp} target="_blank" rel="noreferrer" href={`https://api.whatsapp.com/send?phone=541173679175`}>
       <svg className={s.whatsappIcon}>        
@@ -12,3 +12,5 @@ export default function Whatsapp() {
     </a>
   )
 }
+
+export default WhatsApp;

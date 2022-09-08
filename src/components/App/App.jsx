@@ -8,7 +8,7 @@ import Buy from '../Buy';
 import About from '../About';
 import Instagram from '../Instagram';
 import Footer from '../Footer';
-import Whatsapp from '../Whatsapp';
+import WhatsApp from '../WhatsApp';
 import productImg from '../Images';
 import productDescriptions from '../ProductDescriptions';
 import productPrices from '../ProductPrices';
@@ -17,7 +17,7 @@ import Menu from '../Menu';
 
 import '../../styles/base.css';
 
-export default function App() {
+const App = () =>  {
 
   const [isOpen, setIsOpen] = useState(false);
   const [modalImg, setModalImg] = useState('../../img/blog-1.jpg');
@@ -35,8 +35,11 @@ export default function App() {
     <div> 
       { true && <Menu/>}
       <Modal title={modalTitle} img={modalImg} desc={modalDesc} open={isOpen} onClose={() => setIsOpen(false)} />
-      <Anouncement />  
+
+      <Anouncement />
+
       <Navbar />
+
       <HomeSlider width="100%" />
 
       <Products title="Agendas" subtitle="¡Organízate y no te olvides de nada!" id="agendas">      
@@ -47,6 +50,7 @@ export default function App() {
           price={productPrices.semanal} 
           click={() => handleOpenModal({ title:'Semanal', desc: productDescriptions.semanal, img: productImg.semanalModal})} 
         />
+
         <Product 
           title="Universitaria" 
           id="universitaria" 
@@ -54,6 +58,7 @@ export default function App() {
           price={productPrices.universitaria}  
           click={() => handleOpenModal({title:'Universitaria', desc: productDescriptions.universitaria, img: productImg.universitariaModal})}
         />
+
         <Product 
           title="Docente" 
           id="docente" 
@@ -62,6 +67,7 @@ export default function App() {
           click={() => handleOpenModal({title:'Docente', desc: productDescriptions.docente, img: productImg.docenteModal})} 
         />
       </Products>
+
       <Products title="Cuadernos" subtitle="¡Para volar con tu imaginación!" dark id="cuadernos" >
         <Product 
           title="Rayado" 
@@ -70,6 +76,7 @@ export default function App() {
           price={productPrices.rayado}
           click={() => handleOpenModal({title:'Rayado', desc: productDescriptions.rayado, img: productImg.rayadoModal})} 
         />
+
         <Product 
           title="Cuadriculado" 
           id="cuadriculado" 
@@ -77,6 +84,7 @@ export default function App() {
           price={productPrices.cuadriculado}
           click={() => handleOpenModal({title:'Cuadriculado', desc: productDescriptions.cuadriculado, img: productImg.cuadriculadoModal})} 
         />
+
         <Product 
           title="Punteado" 
           id="punteado" 
@@ -84,6 +92,7 @@ export default function App() {
           price={productPrices.punteado}
           click={() => handleOpenModal({title:'Punteado', desc: productDescriptions.punteado, img: productImg.punteadoModal})} 
         />
+
         <Product 
           title="Liso" 
           id="liso" 
@@ -92,7 +101,9 @@ export default function App() {
           click={() => handleOpenModal({title:'Liso', desc: productDescriptions.liso, img: productImg.lisoModal})} 
         />
       </Products>
+
       <About/>  
+
       <Products title="Kakeibo" subtitle="El método de ahorro japonés" dark id="kakeibo">
         <Product 
           title="Kakeibo" 
@@ -101,6 +112,7 @@ export default function App() {
           click={() => handleOpenModal({title:'Kakeibo', desc: productDescriptions.kakeibo, img: productImg.kakeiboModal})} 
         />
       </Products>
+
       <Products title="Babys" subtitle="lorem ipsum" id="babys">
         <Product 
           title="Baby" 
@@ -109,7 +121,9 @@ export default function App() {
           click={() => handleOpenModal({title:'Baby', desc: productDescriptions.baby, img: productImg.babyModal})} 
         />
       </Products>
+
       <Buy/>  
+
       <Products title="Mascotas" subtitle="lorem ipsum" id="mascotas">
         <Product 
           title="Libreta Sanitaria Clásica" 
@@ -118,6 +132,7 @@ export default function App() {
           price={productPrices.sanitariaClasica}
           click={() => handleOpenModal({title:'Libreta Sanitaria Clásica', desc: productDescriptions.sanitariaClasica, img: productImg.sanitariaClasicaModal})} 
         />
+
         <Product 
           title="Libreta Sanitaria Deluxe" 
           id="deluxe" 
@@ -126,6 +141,7 @@ export default function App() {
           click={() => handleOpenModal({title:'Libreta Sanitaria Deluxe', desc: productDescriptions.sanitariaDeluxe, img: productImg.sanitariaDeluxeModal})} 
         />
       </Products>
+
       <Products title="Telas" subtitle="lorem ipsum" dark id="telas">
         <Product 
           title="Nihon" 
@@ -134,6 +150,7 @@ export default function App() {
           price={productPrices.nihon}
           click={() => handleOpenModal({title:'Nihon', desc: productDescriptions.nihon, img: productImg.nihonModal})} 
         />
+
         <Product 
           title="Miryoku" 
           id="miryoku" 
@@ -141,6 +158,7 @@ export default function App() {
           price={productPrices.miryoku}
           click={() => handleOpenModal({title:'Miryoku', desc: productDescriptions.miryoku, img: productImg.miryokuModal})} 
         />
+
         <Product 
           title="Tradicionales" 
           id="tradicionales" 
@@ -148,6 +166,7 @@ export default function App() {
           price={productPrices.tradicionales}
           click={() => handleOpenModal({title:'Tradicionales', desc: productDescriptions.tradicionales, img: productImg.tradicionalesModal})} 
         />
+
         <Product 
           title="Personalizadas" 
           id="personalizadas" 
@@ -156,13 +175,16 @@ export default function App() {
           click={() => handleOpenModal({title:'Personalizadas', desc: productDescriptions.personalizadas, img: productImg.personalizadasModal})} 
         />
       </Products>
-      <Instagram/>  
+
+      <Instagram/> 
+
       <Footer/>  
-      <Whatsapp/>
-  
+
+      <WhatsApp/>  
     </div>
   );  
 }
 
+export default App;
 
 
