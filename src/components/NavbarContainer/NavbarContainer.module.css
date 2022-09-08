@@ -1,0 +1,29 @@
+.navbar__itemContainer {
+	position: relative;
+	margin: auto;
+	text-align: center;
+}
+
+.navbar__itemContainer > a:hover + .navbar__sub-menu {
+	visibility: visible;
+	opacity: 1;
+}
+
+.navbar__item,
+.navbar__item:link,
+.navbar__item:visited {
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	color: var(--color-dark);
+	padding: 0 1rem;
+	font-weight: 300;
+	font-size: 1.1rem;
+	text-align: center;
+	transition: all 0.2s;
+}
+
+.navbar__item:hover {
+	color: lighten(var(--color-dark), 25%);
+	cursor: pointer;
+}

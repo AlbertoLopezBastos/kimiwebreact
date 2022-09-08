@@ -1,0 +1,41 @@
+.buy {
+  background-color: var(--color-pink);
+  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
+}
+
+.buy__container{
+	display: flex;
+	width: 60vw;
+	margin: auto;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: var(--bp-md-sm)) {
+	.buy__container{
+		width: 100vw;
+	}
+}
+
+.buy__btn {
+	border: 1px solid var(--color-dark);
+	background-color: transparent;
+	color: var(--color-dark);
+	text-transform: uppercase;
+	padding: 2rem 4rem;
+	font-family: var(--font-primary);
+	letter-spacing: 0.2rem;
+	font-size: 2rem;
+	font-weight: 600;
+	margin-top: 2.5rem;
+	transition: all 0.2s;
+	text-decoration: none;
+}
+
+.buy__btn:hover {
+	background-color: var(--color-dark);
+	cursor: pointer;
+	color: var(--color-light);
+}

@@ -1,0 +1,11 @@
+.footer {
+  margin: auto;
+  background-color: var(--color-dark);
+  text-align: center;
+  color: var(--color-light);
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  padding: 2rem 0;
+}

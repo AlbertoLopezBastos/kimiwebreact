@@ -1,0 +1,135 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-light);
+  padding: 2rem;
+  z-index: 4000;
+  border-radius: 0.5rem;   
+}
+
+.modal__container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+}
+
+@media only screen and (max-width: var(--bp-jumbo)) {
+	.modal__container{
+		width: 70vw;
+	}
+}
+
+@media only screen and (max-width: var(--bp-md-sm)) {
+	.modal__container{
+		width: 80vw;
+	}
+}
+
+@media only screen and (max-width: var(--bp-small)) {
+	.modal__container{
+		width: 60vw;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+}
+
+@media only screen and (max-width: var(--bp-small)) {
+	.modal__container{
+		width: 60vw;
+		max-height: 95vh;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+}
+
+@media only screen and (max-width: var(--bp-smallest)) {
+	.modal__container{
+		width: 80vw;
+	}
+}
+
+.modal__text{
+	display: flex;
+	flex-direction: column;  
+}
+
+@media only screen and (max-width: var(--bp-small)) {
+	.modal__text{
+		grid-row: 1/2;
+		justify-content: center;
+	}
+}
+
+.modal__title{
+	font-size: 5rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+@media only screen and (max-width: 1700px) {
+	.modal__title{
+		font-size: 4rem;
+	}
+}
+
+.modal__desc{
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	margin: 1rem auto;
+	width: 90%;
+}
+
+@media only screen and (max-width: 1700px) {
+	.modal__desc{
+		line-height: 2rem;
+	}
+}
+
+@media only screen and (max-width: var(--bp-medium)) {
+}
+
+.modal__closeBtn{
+	border: none;
+	color: var(--color-dark);
+	background-color: var(--color-light);
+	border-radius: 5rem;
+	font-size: 2.5rem;
+	height: 4rem;
+	width: 4rem;
+	transition: all 0.2s ease-in;
+	outline: none;
+	z-index: 4000;
+	grid-row:  1/2;
+	grid-column: 1/3;
+	justify-self: end;
+	align-self: center;
+	position: fixed;
+	top: 1rem;
+	right: 1rem; 
+}
+
+.modal__closeBtn:hover{
+	cursor: pointer;
+	transform: translateY(-2px);
+	box-shadow: 0.2rem 0.3rem 0.4rem 0rem rgba(0,0,0,0.2);
+}
+
+.modal__closeBtn:active{
+	transform: translateY(0px);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right:0;
+  left:0;
+  background-color: rgba(0,0,0,0.7);
+  padding: 50px;
+  z-index: 1000;
+}
+

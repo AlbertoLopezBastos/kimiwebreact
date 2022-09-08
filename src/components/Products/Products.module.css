@@ -1,0 +1,18 @@
+.productsContainer {
+  background-color: var(--color-pink);
+  /* margin-top: 0.3rem;
+  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2); */
+}
+
+.productsContainerWhite{
+	background-color: var(--color-light);
+}
+
+.products {
+  justify-content: center;
+  width: 60vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns:  repeat(auto-fit, minmax(45rem, 1fr));
+  padding-bottom: 5rem;
+}

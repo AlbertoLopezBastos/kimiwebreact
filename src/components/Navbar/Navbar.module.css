@@ -1,0 +1,130 @@
+.navbar {
+  text-align: center;
+  display: grid;
+  width: 90vw;
+  margin: auto;
+  padding: 3rem 0;
+  grid-template-columns: 1fr 5fr;
+	background-color: #fff;
+  /* 
+	position: sticky;
+  top: 4rem;
+  z-index: 1000;
+  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
+	*/
+}
+
+@media only screen and(max-width: 1500px) {
+	.navbar {
+		grid-template-columns: 1fr 2fr;
+	}
+}
+
+@media only screen and(max-width: var(--bp-medium)) {
+	.navbar {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media only screen and (max-width: var(--bp-md-sm)) {
+	.navbar {
+		width: 100vw;
+	}
+}
+
+.navbar__logo {
+	display: flex;
+	flex-direction: column;
+}
+
+.logo__title {
+	font-family: kimiFont;
+	font-size: 10rem;
+	font-weight: 100;
+	letter-spacing: 0.5rem;
+	line-height: 11rem;
+}
+
+@media only screen and(max-width: var(--bp-medium)) {
+	.logo__title {
+		font-size: 12rem;
+	}
+}
+
+.logo__subtitle {
+	font-size: 1.5rem;
+	font-family: kimiFontTertiary;
+	letter-spacing: 0.3rem;
+}
+
+.navbar__nav {
+	display: none;
+	/*display: grid;*/
+	grid-template-columns: repeat(9, 1fr);
+	margin: auto;
+	align-content: center;
+	justify-items: center;
+	width: max-content;
+}
+
+@media only screen and(max-width: 1600px) {
+	.navbar__nav {
+		grid-template-columns: repeat(6, 1fr);
+		row-gap: 2rem;
+	}
+}
+
+@media only screen and(max-width: var(--bp-largest)) {
+	.navbar__nav {
+		grid-template-columns: repeat(5, 1fr);
+		row-gap: 2rem;
+	}
+}
+
+@media only screen and(max-width: var(--bp-medium)) {
+	.navbar__nav {
+		display: none;
+	}
+}
+
+.navbar__itemContainer {
+	position: relative;
+	margin: auto;
+	text-align: center;
+}
+
+.navbar__itemontainer > a:hover + .navbar__sub-menu {
+	visibility: visible;
+	opacity: 1;
+}
+
+.navbar__item,
+.navbar__item:link,
+.navbar__item:visited {
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	color: var(--color-dark);
+	padding: 0 1rem;
+	font-weight: 300;
+	font-size: 1.1rem;
+	text-align: center;
+	transition: all 0.2s;
+}
+
+.navbar__item:hover {
+	color: lighten(var(--color-dark), 25%);
+	cursor: pointer;
+}
+
+a{
+	text-decoration: none;
+	color: var(--color-dark);
+	transition: all 0.2s;
+	letter-spacing: 0.2rem;
+}
+
+a:hover {
+	color: lighten(var(--color-dark), 25%);
+	cursor: pointer;
+}
