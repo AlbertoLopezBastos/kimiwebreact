@@ -5,7 +5,7 @@
   flex-direction: column;
 }
 
-@media only screen and (max-width: var(--bp-medium)) {
+@media only screen and (max-width: 56.25em) {
 	.instagramContainer{
 		width: 100vw;
 	}
@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-@media only screen and (max-width: var(--bp-md-sm)) {
+@media only screen and (max-width:50em) {
 	.instagram {
 		padding: 5rem 0;
 		grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
@@ -36,7 +36,7 @@
 	transition: all 0.15s ease-in-out;
 }
 
-@media only screen and (max-width: var(--bp-md-sm)) {
+@media only screen and (max-width: 50em) {
 	.instagram__img {
 		width: 25rem;
 		height: 25rem;

@@ -1,6 +1,5 @@
 .navbar {
   text-align: center;
-  display: grid;
   width: 90vw;
   margin: auto;
   padding: 3rem 0;
@@ -20,14 +19,16 @@
 	}
 }
 
-@media only screen and(max-width: var(--bp-medium)) {
+@media only screen and(max-width: 56.25em) {
 	.navbar {
+		display: grid;
 		grid-template-columns: 1fr;
 	}
 }
 
-@media only screen and (max-width: var(--bp-md-sm)) {
+@media only screen and (max-width: 50em) {
 	.navbar {
+		display: block;
 		width: 100vw;
 	}
 }
@@ -45,7 +46,7 @@
 	line-height: 11rem;
 }
 
-@media only screen and(max-width: var(--bp-medium)) {
+@media only screen and(max-width: 56.25em) {
 	.logo__title {
 		font-size: 12rem;
 	}
@@ -74,14 +75,14 @@
 	}
 }
 
-@media only screen and(max-width: var(--bp-largest)) {
+@media only screen and(max-width: 75em) {
 	.navbar__nav {
 		grid-template-columns: repeat(5, 1fr);
 		row-gap: 2rem;
 	}
 }
 
-@media only screen and(max-width: var(--bp-medium)) {
+@media only screen and(max-width: 56.25em) {
 	.navbar__nav {
 		display: none;
 	}

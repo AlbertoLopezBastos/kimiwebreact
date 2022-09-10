@@ -10,7 +10,7 @@
 
 .products {
   justify-content: center;
-  width: 60vw;
+  width: 90vw;
   margin: auto;
   display: grid;
   grid-template-columns:  repeat(auto-fit, minmax(45rem, 1fr));
