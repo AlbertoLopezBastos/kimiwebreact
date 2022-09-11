@@ -7,9 +7,9 @@ const NavbarContainer = (props) => {
 
     if(props.link) {
       return (
-        <div className={s.navbar__itemContainer}>     
+        <div className={s.itemContainer}>     
 
-        <a className={s.navbar__item} href={props.link} target="_blank" rel="noopener noreferrer">        
+        <a className={s.item} href={props.link} target="_blank" rel="noopener noreferrer">        
           {props.item}   
         </a> 
         
@@ -19,8 +19,8 @@ const NavbarContainer = (props) => {
     }    
 
     return (
-      <div className={s.navbar__itemContainer}>     
-          <Link className={s.navbar__item} 
+      <div className={s.itemContainer}>     
+          <Link className={s.item} 
                 activeClass="active"
                 spy={true} 
                 smooth={true} 

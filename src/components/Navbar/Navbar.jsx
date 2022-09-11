@@ -14,13 +14,13 @@ const instagramIcon = <svg className="instagram__icon">
 
   return (
     <nav className={s.navbar}>
-      <div className={s.navbar__logo}>
-        <h1 className={s.logo__title}>KIMI</h1>
+      <div className={s.logo}>
+        <h1 className={s.logoTitle}>KIMI</h1>
 
-        <h1 className={s.logo__subtitle}>Encuadernación Artesanal</h1>
+        <h1 className={s.logoSubtitle}>Encuadernación Artesanal</h1>
       </div>
 
-      <div className={s.navbar__nav}>  
+      <div className={s.navbarNav}>  
         <NavbarContainer item="Agendas" id="agendas">
           <NavbarSubMenu>
             <NavbarSubMenuItem value="semanal" id="semanal"/>

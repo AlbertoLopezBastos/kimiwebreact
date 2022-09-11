@@ -1,17 +1,17 @@
-.navbar__itemContainer {
+.itemContainer {
 	position: relative;
 	margin: auto;
 	text-align: center;
 }
 
-.navbar__itemContainer > a:hover + .navbar__sub-menu {
+.itemContainer > a:hover + .navbar__sub-menu {
 	visibility: visible;
 	opacity: 1;
 }
 
-.navbar__item,
-.navbar__item:link,
-.navbar__item:visited {
+.item,
+.item:link,
+.item:visited {
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
@@ -23,7 +23,19 @@
 	transition: all 0.2s;
 }
 
-.navbar__item:hover {
+.item:hover {
+	color: lighten(var(--color-dark), 25%);
+	cursor: pointer;
+}
+
+a{
+	text-decoration: none;
+	color: var(--color-dark);
+	transition: all 0.2s;
+	letter-spacing: 0.2rem;
+}
+
+a:hover {
 	color: lighten(var(--color-dark), 25%);
 	cursor: pointer;
 }

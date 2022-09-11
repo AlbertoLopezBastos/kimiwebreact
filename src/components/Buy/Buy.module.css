@@ -3,7 +3,7 @@
   box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0,0,0,0.2);
 }
 
-.buy__container{
+.container{
 	display: flex;
 	width: 60vw;
 	margin: auto;
@@ -14,12 +14,12 @@
 }
 
 @media only screen and (max-width: 50em) {
-	.buy__container{
+	.container{
 		width: 100vw;
 	}
 }
 
-.buy__btn {
+.btn {
 	border: 1px solid var(--color-dark);
 	background-color: transparent;
 	color: var(--color-dark);
@@ -34,7 +34,7 @@
 	text-decoration: none;
 }
 
-.buy__btn:hover {
+.btn:hover {
 	background-color: var(--color-dark);
 	cursor: pointer;
 	color: var(--color-light);

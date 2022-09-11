@@ -4,7 +4,7 @@ import s from  './NavbarSubMenu.module.css';
 
 const NavbarSubMenu = (props) => {
   return (
-    <ul className={s.navbar__subMenu}>
+    <ul className={s.subMenu}>
       {props.children}
     </ul>
   )

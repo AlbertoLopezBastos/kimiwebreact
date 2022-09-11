@@ -19,16 +19,9 @@
 	cursor: pointer;
 }
 
-.whatsappIcon {
+.icon {
 	fill: var(--color-light);
 	height: 3rem;
 	width: 3rem;
 }
 
-.whatsapp__text {
-	color: var(--color-light);
-	padding: 1rem;
-	font-family: var(--font-secondary);
-	font-size: 1.5rem;
-	letter-spacing: 0.1rem;
-}

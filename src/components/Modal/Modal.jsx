@@ -12,17 +12,17 @@ const Modal = ({open, img, desc, title, onClose}) => {
         <div className={s.overlay} onClick={onClose}></div>
 
         <div className={s.modal}>
-          <button className={s.modal__closeBtn} onClick={onClose}>&#10005;</button>
+          <button className={s.closeBtn} onClick={onClose}>&#10005;</button>
 
-          <div className={s.modal__container}>
+          <div className={s.container}>
             <div className={s.sliderContainer}>  
               <ImageSlider images={img} />
             </div>
 
-            <div className={s.modal__text}>
-              <div className={s.modal__title}>{title}</div>
+            <div className={s.text}>
+              <div className={s.title}>{title}</div>
 
-              <div className={s.modal__desc}>{desc}</div>
+              <div className={s.desc}>{desc}</div>
             </div>
           </div>
         </div>

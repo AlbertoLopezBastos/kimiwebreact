@@ -8,11 +8,11 @@ const Product = ({id,img,title,price, click}) => {
 
   return (
     <div onClick={click} className={s.product} id={id}>
-      <img className={s.product__img} alt="Imagen del producto" src={img}></img>
+      <img className={s.img} alt="Imagen del producto" src={img}></img>
 
-      <p className={s.product__text}>{title}</p>
+      <p className={s.text}>{title}</p>
       {
-        showPrices && <p className={s.product__price}>{price}</p> 
+        showPrices && <p className={s.price}>{price}</p> 
       }
     </div>
   )

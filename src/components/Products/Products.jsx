@@ -4,7 +4,7 @@ import s from  './Products.module.css';
 
 const Products = (props) => {
 
-  let containerStyles = props.dark ? `${s.productsContainer}`: `${s.productsContainer} ${s.productsContainerWhite}`;
+  let containerStyles = props.dark ? `${s.container}`: `${s.container} ${s.containerWhite}`;
 
   return (
     <section id={props.id} className={containerStyles}>

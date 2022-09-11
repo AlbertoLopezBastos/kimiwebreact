@@ -33,12 +33,12 @@
 	}
 }
 
-.navbar__logo {
+.logo {
 	display: flex;
 	flex-direction: column;
 }
 
-.logo__title {
+.logoTitle {
 	font-family: kimiFont;
 	font-size: 10rem;
 	font-weight: 100;
@@ -47,18 +47,18 @@
 }
 
 @media only screen and(max-width: 56.25em) {
-	.logo__title {
+	.logoTitle {
 		font-size: 12rem;
 	}
 }
 
-.logo__subtitle {
+.logoSubtitle {
 	font-size: 1.5rem;
 	font-family: kimiFontTertiary;
 	letter-spacing: 0.3rem;
 }
 
-.navbar__nav {
+.navbarNav {
 	display: none;
 	/*display: grid;*/
 	grid-template-columns: repeat(9, 1fr);
@@ -69,63 +69,24 @@
 }
 
 @media only screen and(max-width: 1600px) {
-	.navbar__nav {
+	.navbarNav {
 		grid-template-columns: repeat(6, 1fr);
 		row-gap: 2rem;
 	}
 }
 
 @media only screen and(max-width: 75em) {
-	.navbar__nav {
+	.navbarNav {
 		grid-template-columns: repeat(5, 1fr);
 		row-gap: 2rem;
 	}
 }
 
 @media only screen and(max-width: 56.25em) {
-	.navbar__nav {
+	.navbarNav {
 		display: none;
 	}
 }
 
-.navbar__itemContainer {
-	position: relative;
-	margin: auto;
-	text-align: center;
-}
 
-.navbar__itemontainer > a:hover + .navbar__sub-menu {
-	visibility: visible;
-	opacity: 1;
-}
 
-.navbar__item,
-.navbar__item:link,
-.navbar__item:visited {
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-	color: var(--color-dark);
-	padding: 0 1rem;
-	font-weight: 300;
-	font-size: 1.1rem;
-	text-align: center;
-	transition: all 0.2s;
-}
-
-.navbar__item:hover {
-	color: lighten(var(--color-dark), 25%);
-	cursor: pointer;
-}
-
-a{
-	text-decoration: none;
-	color: var(--color-dark);
-	transition: all 0.2s;
-	letter-spacing: 0.2rem;
-}
-
-a:hover {
-	color: lighten(var(--color-dark), 25%);
-	cursor: pointer;
-}

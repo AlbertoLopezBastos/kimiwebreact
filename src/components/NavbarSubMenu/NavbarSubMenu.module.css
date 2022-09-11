@@ -1,4 +1,4 @@
-.navbar__subMenu {
+.subMenu {
 	border-radius: 0.25rem;
 	background-color: var(--color-dark);
 	font-size: 1.2rem;
@@ -16,12 +16,12 @@
 	z-index: 1;
 }
 
-.navbar__subMenu:hover {
+.subMenu:hover {
 	visibility: visible;
 	opacity: 1;
 }
 
-.navbar__subMenu li {
+.subMenu li {
 	padding: 1rem;
 	color: var(--color-dark);
 }
