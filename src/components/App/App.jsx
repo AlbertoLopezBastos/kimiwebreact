@@ -14,6 +14,7 @@ import productDescriptions from '../ProductDescriptions';
 import productPrices from '../ProductPrices';
 import Modal from '../Modal';
 import Menu from '../Menu';
+import customData from '../Data/Products'
 
 import '../../styles/base.css';
 
@@ -42,139 +43,26 @@ const App = () =>  {
 
       <HomeSlider width="100%" />
 
-      <Products title="Agendas" subtitle="¡Organízate y no te olvides de nada!" id="agendas">      
-        <Product 
-          title="Semanal" 
-          id="semanal" 
-          img={productImg.semanal} 
-          price={productPrices.semanal} 
-          click={() => handleOpenModal({ title:'Semanal', desc: productDescriptions.semanal, img: productImg.semanalModal})} 
-        />
+      {customData.map((category,index) => {
+        return (
+          <Products dark={index%2==1} key={category.id} title={category.title} subtitle={category.subtitle} id={category.id}>   
+              {category.products.map(product =>               
+                  <Product 
+                  key={product.id}
+                  title={product.title} 
+                  id={product.id} 
+                  img={productImg[product.id]} 
+                  price={productPrices[product.id]} 
+                  click={() => handleOpenModal({ title:product.title, desc: productDescriptions[product.id], img: productImg[`${product.id}Modal`]})} 
+                />              
+              )}
+          </Products> 
+        )}
+      )}
+      
+      <About/>
 
-        <Product 
-          title="Universitaria" 
-          id="universitaria" 
-          img={productImg.universitaria} 
-          price={productPrices.universitaria}  
-          click={() => handleOpenModal({title:'Universitaria', desc: productDescriptions.universitaria, img: productImg.universitariaModal})}
-        />
-
-        <Product 
-          title="Docente" 
-          id="docente" 
-          img={productImg.docente} 
-          price={productPrices.docente} 
-          click={() => handleOpenModal({title:'Docente', desc: productDescriptions.docente, img: productImg.docenteModal})} 
-        />
-      </Products>
-
-      <Products title="Cuadernos" subtitle="¡Para volar con tu imaginación!" dark id="cuadernos" >
-        <Product 
-          title="Rayado" 
-          id="rayado" 
-          img={productImg.rayado} 
-          price={productPrices.rayado}
-          click={() => handleOpenModal({title:'Rayado', desc: productDescriptions.rayado, img: productImg.rayadoModal})} 
-        />
-
-        <Product 
-          title="Cuadriculado" 
-          id="cuadriculado" 
-          img={productImg.cuadriculado} 
-          price={productPrices.cuadriculado}
-          click={() => handleOpenModal({title:'Cuadriculado', desc: productDescriptions.cuadriculado, img: productImg.cuadriculadoModal})} 
-        />
-
-        <Product 
-          title="Punteado" 
-          id="punteado" 
-          img={productImg.punteado} 
-          price={productPrices.punteado}
-          click={() => handleOpenModal({title:'Punteado', desc: productDescriptions.punteado, img: productImg.punteadoModal})} 
-        />
-
-        <Product 
-          title="Liso" 
-          id="liso" 
-          img={productImg.liso} 
-          price={productPrices.liso}
-          click={() => handleOpenModal({title:'Liso', desc: productDescriptions.liso, img: productImg.lisoModal})} 
-        />
-      </Products>
-
-      <About/>  
-
-      <Products title="Kakeibo" subtitle="El método de ahorro japonés" dark id="kakeibo">
-        <Product 
-          title="Kakeibo" 
-          img={productImg.kakeibo} 
-          price={productPrices.kakeibo}
-          click={() => handleOpenModal({title:'Kakeibo', desc: productDescriptions.kakeibo, img: productImg.kakeiboModal})} 
-        />
-      </Products>
-
-      <Products title="Babys" subtitle="lorem ipsum" id="babys">
-        <Product 
-          title="Baby" 
-          img={productImg.baby} 
-          price={productPrices.baby}
-          click={() => handleOpenModal({title:'Baby', desc: productDescriptions.baby, img: productImg.babyModal})} 
-        />
-      </Products>
-
-      <Buy/>  
-
-      <Products title="Mascotas" subtitle="lorem ipsum" id="mascotas">
-        <Product 
-          title="Libreta Sanitaria Clásica" 
-          id="clásica" 
-          img={productImg.sanitariaClasica} 
-          price={productPrices.sanitariaClasica}
-          click={() => handleOpenModal({title:'Libreta Sanitaria Clásica', desc: productDescriptions.sanitariaClasica, img: productImg.sanitariaClasicaModal})} 
-        />
-
-        <Product 
-          title="Libreta Sanitaria Deluxe" 
-          id="deluxe" 
-          img={productImg.sanitariaDeluxe} 
-          price={productPrices.sanitariaDeluxe}
-          click={() => handleOpenModal({title:'Libreta Sanitaria Deluxe', desc: productDescriptions.sanitariaDeluxe, img: productImg.sanitariaDeluxeModal})} 
-        />
-      </Products>
-
-      <Products title="Telas" subtitle="lorem ipsum" dark id="telas">
-        <Product 
-          title="Nihon" 
-          id="nihon" 
-          img={productImg.nihon} 
-          price={productPrices.nihon}
-          click={() => handleOpenModal({title:'Nihon', desc: productDescriptions.nihon, img: productImg.nihonModal})} 
-        />
-
-        <Product 
-          title="Miryoku" 
-          id="miryoku" 
-          img={productImg.miryoku} 
-          price={productPrices.miryoku}
-          click={() => handleOpenModal({title:'Miryoku', desc: productDescriptions.miryoku, img: productImg.miryokuModal})} 
-        />
-
-        <Product 
-          title="Tradicionales" 
-          id="tradicionales" 
-          img={productImg.tradicionales} 
-          price={productPrices.tradicionales}
-          click={() => handleOpenModal({title:'Tradicionales', desc: productDescriptions.tradicionales, img: productImg.tradicionalesModal})} 
-        />
-
-        <Product 
-          title="Personalizadas" 
-          id="personalizadas" 
-          img={productImg.personalizadas} 
-          price={productPrices.personalizadas}
-          click={() => handleOpenModal({title:'Personalizadas', desc: productDescriptions.personalizadas, img: productImg.personalizadasModal})} 
-        />
-      </Products>
+      <Buy/>
 
       <Instagram/> 
 
